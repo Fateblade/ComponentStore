@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson</RootNamespace>
+    <AssemblyName>Components.Data.GenericDataStoring.NewtonsoftJson</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenericDataStoring.Contract\GenericDataStoring.Contract.csproj" />
+    <ProjectReference Include="..\Identifiable.DataClasses\Identifiable.DataClasses.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+      <HintPath>..\..\CoCo2.0\CoCo.Core.Contract\bin\Debug\netstandard2.0\CoCo.Core.Contract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
