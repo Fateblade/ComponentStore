@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{43C5F594-39C1-4A0E-8FC3-56D24BB99A47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0937C992-5F3C-494D-95B4-F102C8450F74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{1AC5E68F-7055-4BED-9213-48103284979D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{663EDA9A-F100-4B50-8D1C-20BE8EA2651E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Contract", "Logging.Contract\Logging.Contract.csproj", "{B7C23E6D-E48E-471F-80E9-2608E2092763}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Csv", "Logging.Csv\Logging.Csv.csproj", "{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.PrismWrapper", "Logging.PrismWrapper\Logging.PrismWrapper.csproj", "{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonMessages.Contract", "CommonMessages.Contract\CommonMessages.Contract.csproj", "{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7C23E6D-E48E-471F-80E9-2608E2092763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C23E6D-E48E-471F-80E9-2608E2092763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C23E6D-E48E-471F-80E9-2608E2092763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C23E6D-E48E-471F-80E9-2608E2092763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7C23E6D-E48E-471F-80E9-2608E2092763} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
+		{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
+		{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
+		{4F39E52B-C626-41B8-BADD-16A3D6F20B1A} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
+	EndGlobalSection
+EndGlobal
