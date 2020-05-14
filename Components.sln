@@ -25,6 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericDataStoring.Contract
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericDataStoring.NewtonsoftJson", "GenericDataStoring.NewtonsoftJson\GenericDataStoring.NewtonsoftJson.csproj", "{9596463B-4E93-4800-9189-AAE83047A70F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6C20A490-DF10-4F6E-B2DA-415446DF87CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson", "CoCo.Core.Configuration.NewtonsoftJson\CoCo.Core.Configuration.NewtonsoftJson.csproj", "{68404F43-CBCE-48CA-9392-E1E5C48A0913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{9596463B-4E93-4800-9189-AAE83047A70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9596463B-4E93-4800-9189-AAE83047A70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9596463B-4E93-4800-9189-AAE83047A70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68404F43-CBCE-48CA-9392-E1E5C48A0913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68404F43-CBCE-48CA-9392-E1E5C48A0913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68404F43-CBCE-48CA-9392-E1E5C48A0913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68404F43-CBCE-48CA-9392-E1E5C48A0913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +79,8 @@ Global
 		{E9D9C793-D8BF-4A19-A5C6-CA2183E02E04} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
 		{B6B7E3B6-72BB-4B5C-AE86-E8F83D81EE43} = {0937C992-5F3C-494D-95B4-F102C8450F74}
 		{9596463B-4E93-4800-9189-AAE83047A70F} = {0937C992-5F3C-494D-95B4-F102C8450F74}
+		{6C20A490-DF10-4F6E-B2DA-415446DF87CD} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
+		{68404F43-CBCE-48CA-9392-E1E5C48A0913} = {6C20A490-DF10-4F6E-B2DA-415446DF87CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
