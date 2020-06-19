@@ -20,6 +20,7 @@ namespace Fateblade.Components.CrossCutting.CoCo.Core.Configuration.NewtonsoftJs
         public DatabaseConfigurationRepository(string pathToConfig)
         {
             _pathToConfig = pathToConfig;
+            loadFromFile();
         }
 
 
