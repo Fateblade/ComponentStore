@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Components.Data.GenericDataStoring.SqLite</AssemblyName>
+    <RootNamespace>Fateblade.Components.Data.GenericDataStoring.SqLite</RootNamespace>
+  </PropertyGroup>
+
+</Project>

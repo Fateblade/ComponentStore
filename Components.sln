@@ -31,9 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.New
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson.Test", "CoCo.Core.Configuration.NewtonsoftJson.Test\CoCo.Core.Configuration.NewtonsoftJson.Test.csproj", "{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFormatter.Contract", "ExceptionFormatter.Contract\ExceptionFormatter.Contract.csproj", "{393A6539-C220-4AD9-89CB-15C3EBA3217F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionFormatter.Contract", "ExceptionFormatter.Contract\ExceptionFormatter.Contract.csproj", "{393A6539-C220-4AD9-89CB-15C3EBA3217F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFormatter.SimpleListFormat", "ExceptionFormatter.SimpleListFormat\ExceptionFormatter.SimpleListFormat.csproj", "{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionFormatter.SimpleListFormat", "ExceptionFormatter.SimpleListFormat\ExceptionFormatter.SimpleListFormat.csproj", "{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericDataStoring.SqLite", "GenericDataStoring.SqLite\GenericDataStoring.SqLite.csproj", "{5B495267-8EE6-476E-AD6C-F7114EE96B92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B495267-8EE6-476E-AD6C-F7114EE96B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B495267-8EE6-476E-AD6C-F7114EE96B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B495267-8EE6-476E-AD6C-F7114EE96B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B495267-8EE6-476E-AD6C-F7114EE96B92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{52FC6157-6511-4D78-8B4A-2B9D8DB1305D} = {6C20A490-DF10-4F6E-B2DA-415446DF87CD}
 		{393A6539-C220-4AD9-89CB-15C3EBA3217F} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
 		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
+		{5B495267-8EE6-476E-AD6C-F7114EE96B92} = {0937C992-5F3C-494D-95B4-F102C8450F74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
