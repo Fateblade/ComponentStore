@@ -80,7 +80,10 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
         //private methods
         private void initializeEntitiesFromFile()
         {
-            string completePath = Path.Combine(_configuration.RootDirectoryPath, _fileName);
+            string completePath = String.IsNullOrWhiteSpace(_configuration.RootDirectoryPath) 
+                ? Path.Combine(Directory.GetCurrentDirectory(), _fileName)
+                : Path.Combine(_configuration.RootDirectoryPath, _fileName);
+
             if (!Directory.Exists(_configuration.RootDirectoryPath))
             {
                 Directory.CreateDirectory(_configuration.RootDirectoryPath);

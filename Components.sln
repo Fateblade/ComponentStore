@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{1AC5E68F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{663EDA9A-F100-4B50-8D1C-20BE8EA2651E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Contract", "Logging.Contract\Logging.Contract.csproj", "{B7C23E6D-E48E-471F-80E9-2608E2092763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Contract", "Logging.Contract\Logging.Contract.csproj", "{B7C23E6D-E48E-471F-80E9-2608E2092763}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Csv", "Logging.Csv\Logging.Csv.csproj", "{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Csv", "Logging.Csv\Logging.Csv.csproj", "{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.PrismWrapper", "Logging.PrismWrapper\Logging.PrismWrapper.csproj", "{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.PrismWrapper", "Logging.PrismWrapper\Logging.PrismWrapper.csproj", "{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonMessages.Contract", "CommonMessages.Contract\CommonMessages.Contract.csproj", "{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonMessages.Contract", "CommonMessages.Contract\CommonMessages.Contract.csproj", "{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identifiable.DataClasses", "Identifiable.DataClasses\Identifiable.DataClasses.csproj", "{E9D9C793-D8BF-4A19-A5C6-CA2183E02E04}"
 EndProject
@@ -28,6 +28,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6C20A490-DF10-4F6E-B2DA-415446DF87CD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson", "CoCo.Core.Configuration.NewtonsoftJson\CoCo.Core.Configuration.NewtonsoftJson.csproj", "{68404F43-CBCE-48CA-9392-E1E5C48A0913}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson.Test", "CoCo.Core.Configuration.NewtonsoftJson.Test\CoCo.Core.Configuration.NewtonsoftJson.Test.csproj", "{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFormatter.Contract", "ExceptionFormatter.Contract\ExceptionFormatter.Contract.csproj", "{393A6539-C220-4AD9-89CB-15C3EBA3217F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFormatter.SimpleListFormat", "ExceptionFormatter.SimpleListFormat\ExceptionFormatter.SimpleListFormat.csproj", "{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +73,18 @@ Global
 		{68404F43-CBCE-48CA-9392-E1E5C48A0913}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68404F43-CBCE-48CA-9392-E1E5C48A0913}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68404F43-CBCE-48CA-9392-E1E5C48A0913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393A6539-C220-4AD9-89CB-15C3EBA3217F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393A6539-C220-4AD9-89CB-15C3EBA3217F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393A6539-C220-4AD9-89CB-15C3EBA3217F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393A6539-C220-4AD9-89CB-15C3EBA3217F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +99,9 @@ Global
 		{9596463B-4E93-4800-9189-AAE83047A70F} = {0937C992-5F3C-494D-95B4-F102C8450F74}
 		{6C20A490-DF10-4F6E-B2DA-415446DF87CD} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
 		{68404F43-CBCE-48CA-9392-E1E5C48A0913} = {6C20A490-DF10-4F6E-B2DA-415446DF87CD}
+		{52FC6157-6511-4D78-8B4A-2B9D8DB1305D} = {6C20A490-DF10-4F6E-B2DA-415446DF87CD}
+		{393A6539-C220-4AD9-89CB-15C3EBA3217F} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
+		{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D} = {43C5F594-39C1-4A0E-8FC3-56D24BB99A47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
