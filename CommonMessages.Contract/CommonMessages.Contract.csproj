@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Components.CrossCutting.CommonMessages.Contract</AssemblyName>
+    <RootNamespace>Fateblade.Components.CrossCutting.CommonMessages.Contract</RootNamespace>
   </PropertyGroup>
 
   <Target Name="AfterBuild">

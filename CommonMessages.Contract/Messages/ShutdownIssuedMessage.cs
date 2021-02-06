@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CommonMessages.Contract.Messages
+namespace Fateblade.Components.CrossCutting.CommonMessages.Contract.Messages
 {
     public class ShutdownIssuedMessage
     {

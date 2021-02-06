@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-using CommonMessages.Contract.Messages;
+﻿using Fateblade.Components.CrossCutting.CommonMessages.Contract.Messages;
 using Fateblade.Components.CrossCutting.Logging.Contract;
 using Fateblade.Components.CrossCutting.Logging.Contract.DataClasses;
+using System;
+using System.IO;
 
 namespace Fateblade.Components.CrossCutting.Logging.Csv
 {
@@ -18,6 +18,10 @@ namespace Fateblade.Components.CrossCutting.Logging.Csv
             _buffer = new MessageBufferElement[configuration.MessageBufferCount];
             _fullPath = configuration.FullPathToLogFile;
             _bufferPosition = 0;
+            if (string.IsNullOrWhiteSpace(_fullPath))
+            {
+                _fullPath = Path.Combine(Directory.GetCurrentDirectory(), $"DefaultLogName{DateTime.Now:yyyyMMdd}.csv");
+            }
         }
 
         public void Log(LoggingPriority priority, LoggingType type, string message)
