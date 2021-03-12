@@ -1,18 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Components.Logic.GenericManager.Contract</AssemblyName>
-    <RootNamespace>Fateblade.Components.Logic.GenericManager.Contract</RootNamespace>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Components.Logic.Foundation.Translation.Contract</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.Foundation.Translation.Contract</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Identifiable.DataClasses\Identifiable.DataClasses.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="CoCo.Core.Contract">
-      <HintPath>..\..\CoCo2.0\CoCo.Core.Contract\bin\Debug\netstandard2.0\CoCo.Core.Contract.dll</HintPath>
+      <HintPath>..\_ExternalLibraries\CoCo.Core.Contract.dll</HintPath>
     </Reference>
   </ItemGroup>
 

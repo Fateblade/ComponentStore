@@ -2,21 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Components.Logic.GenericManager</AssemblyName>
-    <RootNamespace>Fateblade.Components.Logic.GenericManager</RootNamespace>
+    <RootNamespace>Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson</RootNamespace>
+    <AssemblyName>Components.Data.GenericDataStoring.NewtonsoftJson</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GenericDataStoring.Contract\GenericDataStoring.Contract.csproj" />
-    <ProjectReference Include="..\GenericManager.Contract\GenericManager.Contract.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
+    <ProjectReference Include="..\Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="CoCo.Core.Contract">
       <HintPath>..\..\CoCo2.0\CoCo.Core.Contract\bin\Debug\netstandard2.0\CoCo.Core.Contract.dll</HintPath>
-    </Reference>
-    <Reference Include="Components.CrossCutting.Base.Identifiable.DataClasses">
-      <HintPath>..\..\Alexandria\_ExternalLibraries\Components.CrossCutting.Base.Identifiable.DataClasses.dll</HintPath>
     </Reference>
   </ItemGroup>
 

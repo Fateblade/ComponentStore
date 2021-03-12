@@ -2,13 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Components.CrossCutting.Logging.Csv</AssemblyName>
-    <RootNamespace>Fateblade.Components.CrossCutting.Logging.Csv</RootNamespace>
+    <AssemblyName>Components.Logic.GenericManager.Contract</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.GenericManager.Contract</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommonMessages.Contract\CommonMessages.Contract.csproj" />
-    <ProjectReference Include="..\Logging.Contract\Logging.Contract.csproj" />
+    <ProjectReference Include="..\Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj" />
   </ItemGroup>
 
   <ItemGroup>

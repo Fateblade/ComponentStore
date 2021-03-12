@@ -11,19 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{1AC5E68F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{663EDA9A-F100-4B50-8D1C-20BE8EA2651E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Contract", "Logging.Contract\Logging.Contract.csproj", "{B7C23E6D-E48E-471F-80E9-2608E2092763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.Contract", "Logging.Contract\CrossCutting.Logging.Contract.csproj", "{B7C23E6D-E48E-471F-80E9-2608E2092763}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.Csv", "Logging.Csv\Logging.Csv.csproj", "{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.Csv", "Logging.Csv\CrossCutting.Logging.Csv.csproj", "{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging.PrismWrapper", "Logging.PrismWrapper\Logging.PrismWrapper.csproj", "{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.PrismWrapper", "Logging.PrismWrapper\CrossCutting.Logging.PrismWrapper.csproj", "{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonMessages.Contract", "CommonMessages.Contract\CommonMessages.Contract.csproj", "{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.CommonMessages.Contract", "CommonMessages.Contract\CrossCutting.CommonMessages.Contract.csproj", "{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identifiable.DataClasses", "Identifiable.DataClasses\Identifiable.DataClasses.csproj", "{E9D9C793-D8BF-4A19-A5C6-CA2183E02E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Identifiable.DataClasses", "Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj", "{E9D9C793-D8BF-4A19-A5C6-CA2183E02E04}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericDataStoring.Contract", "GenericDataStoring.Contract\GenericDataStoring.Contract.csproj", "{B6B7E3B6-72BB-4B5C-AE86-E8F83D81EE43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.Contract", "GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj", "{B6B7E3B6-72BB-4B5C-AE86-E8F83D81EE43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericDataStoring.NewtonsoftJson", "GenericDataStoring.NewtonsoftJson\GenericDataStoring.NewtonsoftJson.csproj", "{9596463B-4E93-4800-9189-AAE83047A70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.NewtonsoftJson", "GenericDataStoring.NewtonsoftJson\Data.GenericDataStoring.NewtonsoftJson.csproj", "{9596463B-4E93-4800-9189-AAE83047A70F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6C20A490-DF10-4F6E-B2DA-415446DF87CD}"
 EndProject
@@ -31,15 +31,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.New
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson.Test", "CoCo.Core.Configuration.NewtonsoftJson.Test\CoCo.Core.Configuration.NewtonsoftJson.Test.csproj", "{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionFormatter.Contract", "ExceptionFormatter.Contract\ExceptionFormatter.Contract.csproj", "{393A6539-C220-4AD9-89CB-15C3EBA3217F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.ExceptionFormatter.Contract", "ExceptionFormatter.Contract\CrossCutting.ExceptionFormatter.Contract.csproj", "{393A6539-C220-4AD9-89CB-15C3EBA3217F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionFormatter.SimpleListFormat", "ExceptionFormatter.SimpleListFormat\ExceptionFormatter.SimpleListFormat.csproj", "{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.ExceptionFormatter.SimpleListFormat", "ExceptionFormatter.SimpleListFormat\CrossCutting.ExceptionFormatter.SimpleListFormat.csproj", "{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericDataStoring.SqLite", "GenericDataStoring.SqLite\GenericDataStoring.SqLite.csproj", "{5B495267-8EE6-476E-AD6C-F7114EE96B92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.SqLite", "GenericDataStoring.SqLite\Data.GenericDataStoring.SqLite.csproj", "{5B495267-8EE6-476E-AD6C-F7114EE96B92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericManager.Contract", "GenericManager.Contract\GenericManager.Contract.csproj", "{1AB393D5-3E9D-4983-A60D-002790CA8B88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.GenericManager.Contract", "GenericManager.Contract\Logic.GenericManager.Contract.csproj", "{1AB393D5-3E9D-4983-A60D-002790CA8B88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericManager", "GenericManager\GenericManager.csproj", "{817FEABC-7F84-4971-9A44-49C4739144E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.GenericManager", "GenericManager\Logic.GenericManager.csproj", "{817FEABC-7F84-4971-9A44-49C4739144E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{827EC198-75C9-43C0-8E8E-5824ED542C65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.Translation.Contract", "Logic.Foundation.Translation.Contract\Logic.Foundation.Translation.Contract.csproj", "{9205EAF8-35E5-4339-BFB5-B4F5355B5227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.Translation", "Logic.Foundation.Translation\Logic.Foundation.Translation.csproj", "{44C8FA20-A30C-4138-B279-59131A014832}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +109,14 @@ Global
 		{817FEABC-7F84-4971-9A44-49C4739144E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{817FEABC-7F84-4971-9A44-49C4739144E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{817FEABC-7F84-4971-9A44-49C4739144E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9205EAF8-35E5-4339-BFB5-B4F5355B5227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9205EAF8-35E5-4339-BFB5-B4F5355B5227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9205EAF8-35E5-4339-BFB5-B4F5355B5227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9205EAF8-35E5-4339-BFB5-B4F5355B5227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C8FA20-A30C-4138-B279-59131A014832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C8FA20-A30C-4138-B279-59131A014832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C8FA20-A30C-4138-B279-59131A014832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C8FA20-A30C-4138-B279-59131A014832}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +137,9 @@ Global
 		{5B495267-8EE6-476E-AD6C-F7114EE96B92} = {0937C992-5F3C-494D-95B4-F102C8450F74}
 		{1AB393D5-3E9D-4983-A60D-002790CA8B88} = {1AC5E68F-7055-4BED-9213-48103284979D}
 		{817FEABC-7F84-4971-9A44-49C4739144E3} = {1AC5E68F-7055-4BED-9213-48103284979D}
+		{827EC198-75C9-43C0-8E8E-5824ED542C65} = {1AC5E68F-7055-4BED-9213-48103284979D}
+		{9205EAF8-35E5-4339-BFB5-B4F5355B5227} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{44C8FA20-A30C-4138-B279-59131A014832} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}

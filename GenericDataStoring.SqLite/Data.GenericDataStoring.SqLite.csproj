@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GenericDataStoring.Contract\GenericDataStoring.Contract.csproj" />
+    <ProjectReference Include="..\GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
   </ItemGroup>
 
   <ItemGroup>

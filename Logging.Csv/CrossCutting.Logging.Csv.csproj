@@ -2,16 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Components.CrossCutting.Logging.PrismWrapper</AssemblyName>
-    <RootNamespace>Fateblade.Components.CrossCutting.Logging.PrismWrapper</RootNamespace>
+    <AssemblyName>Components.CrossCutting.Logging.Csv</AssemblyName>
+    <RootNamespace>Fateblade.Components.CrossCutting.Logging.Csv</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.Core" Version="7.2.0.1367" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Logging.Contract\Logging.Contract.csproj" />
+    <ProjectReference Include="..\CommonMessages.Contract\CrossCutting.CommonMessages.Contract.csproj" />
+    <ProjectReference Include="..\Logging.Contract\CrossCutting.Logging.Contract.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExceptionFormatter.Contract\ExceptionFormatter.Contract.csproj" />
+    <ProjectReference Include="..\ExceptionFormatter.Contract\CrossCutting.ExceptionFormatter.Contract.csproj" />
   </ItemGroup>
 
   <ItemGroup>

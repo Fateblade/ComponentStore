@@ -17,7 +17,8 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
         private readonly GenericDataStoringConfiguration _configuration;
         private readonly string _fileName = typeof(TEntity).Name + ".json";
         private List<TEntity> _entities;
-
+        private readonly string _rootPath;
+        private readonly string _completePath;
 
 
         //properties
@@ -30,6 +31,14 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
         {
             _eventBroker = eventBroker;
             _configuration = configuration;
+
+            _rootPath = String.IsNullOrWhiteSpace(_configuration.RootDirectoryPath)
+                ? Directory.GetCurrentDirectory()
+                : _configuration.RootDirectoryPath;
+
+            _completePath = Path.Combine(_rootPath, _fileName);
+
+
             initializeEntitiesFromFile();
         }
 
@@ -80,22 +89,18 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
         //private methods
         private void initializeEntitiesFromFile()
         {
-            string completePath = String.IsNullOrWhiteSpace(_configuration.RootDirectoryPath) 
-                ? Path.Combine(Directory.GetCurrentDirectory(), _fileName)
-                : Path.Combine(_configuration.RootDirectoryPath, _fileName);
-
-            if (!Directory.Exists(_configuration.RootDirectoryPath))
+            if (!Directory.Exists(_rootPath))
             {
-                Directory.CreateDirectory(_configuration.RootDirectoryPath);
+                Directory.CreateDirectory(_rootPath);
             }
 
-            if (!File.Exists(completePath))
+            if (!File.Exists(_completePath))
             {
                 _entities = new List<TEntity>();
             }
             else
             {
-                using (var sr = new StreamReader(File.Open(completePath, FileMode.OpenOrCreate)))
+                using (var sr = new StreamReader(File.Open(_completePath, FileMode.OpenOrCreate)))
                 {
                     _entities = JsonConvert.DeserializeObject<List<TEntity>>(sr.ReadToEnd());
                 }
@@ -104,8 +109,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
 
         private void save()
         {
-            string completePath = Path.Combine(_configuration.RootDirectoryPath, _fileName);
-            using (var sw = new StreamWriter(File.Open(completePath, FileMode.Create)))
+            using (var sw = new StreamWriter(File.Open(_completePath, FileMode.Create)))
             {
                 sw.Write(JsonConvert.SerializeObject(_entities));
             }
