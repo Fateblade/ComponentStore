@@ -6,6 +6,7 @@ namespace Fateblade.Components.Logic.Foundation.Translation.Contract
     [MapException(typeof(TranslationException))]
     public interface ITranslationStringProvider
     {
+        void ChangeDefaultLanguage(string newDefaultLanguageKey);
         string GetString(string key);
         string GetString(string key, string languageKey);
     }

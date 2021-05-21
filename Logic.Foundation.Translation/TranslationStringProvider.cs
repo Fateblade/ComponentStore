@@ -11,13 +11,22 @@ namespace Fateblade.Components.Logic.Foundation.Translation
     {
         private readonly Dictionary<string, Dictionary<string, string>> _knownStringResources;
         private readonly List<ResourceFilePathInfo> _knownResourceFilePaths;
-        private readonly string _defaultLanguageKey;
+        private string _defaultLanguageKey;
 
-        public TranslationStringProvider(string defaultLanguageKey)
+        public TranslationStringProvider()
         {
-            _defaultLanguageKey = defaultLanguageKey;
             _knownStringResources = new Dictionary<string, Dictionary<string, string>>();
             _knownResourceFilePaths = new List<ResourceFilePathInfo>();
+        }
+
+        public TranslationStringProvider(string defaultLanguageKey) : this()
+        {
+            _defaultLanguageKey = defaultLanguageKey;
+        }
+
+        public void ChangeDefaultLanguage(string newDefaultLanguageKey)
+        {
+            _defaultLanguageKey = newDefaultLanguageKey;
         }
 
         public void LoadStringResourcesForDefaultLanguage(string resourceFileName)
