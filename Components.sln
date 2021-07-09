@@ -47,9 +47,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation", "Logic.Foundation.Translation\Logic.Foundation.Translation.csproj", "{44C8FA20-A30C-4138-B279-59131A014832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.DelayedActionExecution.Contract", "Logic.Foundation.DelayedDelegateExecutor.Contract\Logic.Foundation.DelayedActionExecution.Contract.csproj", "{6E46D195-9998-4D63-A3F9-752642948F3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedActionExecution.Contract", "Logic.Foundation.DelayedDelegateExecutor.Contract\Logic.Foundation.DelayedActionExecution.Contract.csproj", "{6E46D195-9998-4D63-A3F9-752642948F3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.DelayedActionExecution", "Logic.Foundation.DelayedDelegateExecutor\Logic.Foundation.DelayedActionExecution.csproj", "{D180677A-E6D6-4723-8F3A-DE60C9FC821C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedActionExecution", "Logic.Foundation.DelayedDelegateExecutor\Logic.Foundation.DelayedActionExecution.csproj", "{D180677A-E6D6-4723-8F3A-DE60C9FC821C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D743AC65-1C2A-4A88-B973-28CE9D19A34A}"
+	ProjectSection(SolutionItems) = preProject
+		ToDo.md = ToDo.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.FeatureTrackingComponent.Contract", "Logic\Foundation\Logic.Foundation.FeatureTrackingComponent.Contract\Logic.Foundation.FeatureTrackingComponent.Contract.csproj", "{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.FeatureTrackingComponent", "Logic\Foundation\Logic.Foundation.FeatureTrackingComponent\Logic.Foundation.FeatureTrackingComponent.csproj", "{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +138,14 @@ Global
 		{D180677A-E6D6-4723-8F3A-DE60C9FC821C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D180677A-E6D6-4723-8F3A-DE60C9FC821C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D180677A-E6D6-4723-8F3A-DE60C9FC821C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -154,6 +171,8 @@ Global
 		{44C8FA20-A30C-4138-B279-59131A014832} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{6E46D195-9998-4D63-A3F9-752642948F3A} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{D180677A-E6D6-4723-8F3A-DE60C9FC821C} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
