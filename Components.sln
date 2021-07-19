@@ -56,9 +56,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ToDo.md = ToDo.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.FeatureTrackingComponent.Contract", "Logic\Foundation\Logic.Foundation.FeatureTrackingComponent.Contract\Logic.Foundation.FeatureTrackingComponent.Contract.csproj", "{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.FeatureTrackingComponent.Contract", "Logic\Foundation\Logic.Foundation.FeatureTrackingComponent.Contract\Logic.Foundation.FeatureTrackingComponent.Contract.csproj", "{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.FeatureTrackingComponent", "Logic\Foundation\Logic.Foundation.FeatureTrackingComponent\Logic.Foundation.FeatureTrackingComponent.csproj", "{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.FeatureTrackingComponent", "Logic\Foundation\Logic.Foundation.FeatureTrackingComponent\Logic.Foundation.FeatureTrackingComponent.csproj", "{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.ConsentManager", "Logic\Foundation\Logic.Foundation.ConsentManager\Logic.Foundation.ConsentManager.csproj", "{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.ConsentManager.Contract", "Logic\Foundation\Logic.Foundation.ConsentManager.Contract\Logic.Foundation.ConsentManager.Contract.csproj", "{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -146,6 +150,14 @@ Global
 		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -173,6 +185,8 @@ Global
 		{D180677A-E6D6-4723-8F3A-DE60C9FC821C} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{F8DD8D5F-779F-4C9C-B2C3-878A96BBFA40} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
