@@ -22,4 +22,8 @@
     </Reference>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)*.*&quot; &quot;D:\Github\TCSPD\_externalLibraries&quot; /F /R /I /E /Y&#xD;&#xA;" />
+  </Target>
+
 </Project>

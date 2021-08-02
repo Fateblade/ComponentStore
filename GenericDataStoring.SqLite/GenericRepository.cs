@@ -14,21 +14,23 @@ namespace Fateblade.Components.Data.GenericDataStoring.SqLite
     {
         //members
         private readonly IEventBroker _eventBroker;
+        private readonly IPropertyUpdater<TEntity> _entityPropetyUpdater;
         private readonly GenericDataSqLiteStoringConfiguration _configuration;
         private string _completeDbPath;
 
 
 
         //properties
-        public IQueryable<TEntity> Query => throw new NotImplementedException();
+        public IQueryable<TEntity> Query => Entities.AsQueryable();
         public DbSet<TEntity> Entities { get; set; }
 
 
 
         //ctors
-        public GenericRepository(IEventBroker eventBroker, GenericDataSqLiteStoringConfiguration configuration)
+        public GenericRepository(IEventBroker eventBroker, IPropertyUpdater<TEntity> entityPropetyUpdater, GenericDataSqLiteStoringConfiguration configuration)
         {
             _eventBroker = eventBroker;
+            _entityPropetyUpdater = entityPropetyUpdater;
             _configuration = configuration;
             initialize();
         }
@@ -65,10 +67,8 @@ namespace Fateblade.Components.Data.GenericDataStoring.SqLite
             TEntity foundEntity = Entities.FirstOrDefault(existingEntity => entity.Id == existingEntity.Id);
             if (foundEntity != null)
             {
-                //Todo: how do i update properties of a generic entity?
-                //Todo: new component? -> every store needs to implement this converting component for its models then
+                _entityPropetyUpdater.UpdateProperties(entity, foundEntity);
 
-                //for now .... just do a save?
                 base.SaveChanges();
 
                 _eventBroker.Raise(new EntityChangedMessage<TEntity>
@@ -79,7 +79,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.SqLite
             }
             else
             {
-                this.Add(entity);
+                Add(entity);
             }
         }
 
