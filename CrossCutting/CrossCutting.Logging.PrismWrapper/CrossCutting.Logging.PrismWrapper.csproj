@@ -1,13 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.ConsentManager.Contract</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.ConsentManager.Contract</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Components.CrossCutting.Logging.PrismWrapper</AssemblyName>
+    <RootNamespace>Fateblade.Components.CrossCutting.Logging.PrismWrapper</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataClasses\" />
+    <PackageReference Include="Prism.Core" Version="7.2.0.1367" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Logging.Contract\CrossCutting.Logging.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+      <HintPath>..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

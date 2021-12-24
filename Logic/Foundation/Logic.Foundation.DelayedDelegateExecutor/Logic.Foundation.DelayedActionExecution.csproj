@@ -2,21 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>Components.Logic.Foundation.ConsentManager</AssemblyName>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.ConsentManager</RootNamespace>
+    <RootNamespace>Fateblade.Components.Logic.Foundation.DelayedActionExecution</RootNamespace>
+    <AssemblyName>Components.Logic.Foundation.DelayedActionExecution</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Data\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
-    <ProjectReference Include="..\Logic.Foundation.ConsentManager.Contract\Logic.Foundation.ConsentManager.Contract.csproj" />
+    <ProjectReference Include="..\..\..\CrossCutting\CrossCutting.ExceptionFormatter.Contract\CrossCutting.ExceptionFormatter.Contract.csproj" />
+    <ProjectReference Include="..\..\..\CrossCutting\CrossCutting.Logging.Contract\CrossCutting.Logging.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Foundation.DelayedDelegateExecutor.Contract\Logic.Foundation.DelayedActionExecution.Contract.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="CoCo.Core.Contract">
-      <HintPath>..\..\..\_ExternalLibraries\CoCo.Core.Contract.dll</HintPath>
-    </Reference>
-    <Reference Include="Components.CrossCutting.Base.Identifiable.DataClasses">
-      <HintPath>..\..\..\..\testspace_dsa\_ExternalComponents\Components.CrossCutting.Base.Identifiable.DataClasses.dll</HintPath>
+      <HintPath>..\..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
     </Reference>
   </ItemGroup>
 

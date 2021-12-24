@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.FeatureTrackingComponent</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.FeatureTrackingComponent</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Components.Logic.GenericManager.Contract</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.GenericManager.Contract</RootNamespace>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
@@ -11,13 +11,12 @@
   </Target>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Data\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
-    <ProjectReference Include="..\Logic.Foundation.FeatureTrackingComponent.Contract\Logic.Foundation.FeatureTrackingComponent.Contract.csproj" />
+    <ProjectReference Include="..\..\CrossCutting\CrossCutting.Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="CoCo.Core.Contract">
-      <HintPath>..\..\..\_ExternalLibraries\CoCo.Core.Contract.dll</HintPath>
+      <HintPath>..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
     </Reference>
   </ItemGroup>
 

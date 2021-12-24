@@ -2,12 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.ConsentManager.Contract</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.ConsentManager.Contract</AssemblyName>
+    <AssemblyName>Components.Logic.Foundation.Translation</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.Foundation.Translation</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataClasses\" />
+    <ProjectReference Include="..\Logic.Foundation.Translation.Contract\Logic.Foundation.Translation.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+      <HintPath>..\..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

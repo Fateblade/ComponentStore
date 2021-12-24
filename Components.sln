@@ -11,45 +11,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{1AC5E68F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{663EDA9A-F100-4B50-8D1C-20BE8EA2651E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.Contract", "Logging.Contract\CrossCutting.Logging.Contract.csproj", "{B7C23E6D-E48E-471F-80E9-2608E2092763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.Contract", "CrossCutting\CrossCutting.Logging.Contract\CrossCutting.Logging.Contract.csproj", "{B7C23E6D-E48E-471F-80E9-2608E2092763}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.Csv", "Logging.Csv\CrossCutting.Logging.Csv.csproj", "{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.Csv", "CrossCutting\CrossCutting.Logging.Csv\CrossCutting.Logging.Csv.csproj", "{9E872AD7-0C3B-42A0-BA3A-DE3122D1E09A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.PrismWrapper", "Logging.PrismWrapper\CrossCutting.Logging.PrismWrapper.csproj", "{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Logging.PrismWrapper", "CrossCutting\CrossCutting.Logging.PrismWrapper\CrossCutting.Logging.PrismWrapper.csproj", "{F37D8AA6-A642-4615-B5A3-D31A1BBC7EAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.CommonMessages.Contract", "CommonMessages.Contract\CrossCutting.CommonMessages.Contract.csproj", "{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.CommonMessages.Contract", "CrossCutting\CrossCutting.CommonMessages.Contract\CrossCutting.CommonMessages.Contract.csproj", "{4F39E52B-C626-41B8-BADD-16A3D6F20B1A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Identifiable.DataClasses", "Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj", "{E9D9C793-D8BF-4A19-A5C6-CA2183E02E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.Identifiable.DataClasses", "CrossCutting\CrossCutting.Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj", "{E9D9C793-D8BF-4A19-A5C6-CA2183E02E04}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.Contract", "GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj", "{B6B7E3B6-72BB-4B5C-AE86-E8F83D81EE43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.Contract", "Data\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj", "{B6B7E3B6-72BB-4B5C-AE86-E8F83D81EE43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.NewtonsoftJson", "GenericDataStoring.NewtonsoftJson\Data.GenericDataStoring.NewtonsoftJson.csproj", "{9596463B-4E93-4800-9189-AAE83047A70F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.NewtonsoftJson", "Data\Data.GenericDataStoring.NewtonsoftJson\Data.GenericDataStoring.NewtonsoftJson.csproj", "{9596463B-4E93-4800-9189-AAE83047A70F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6C20A490-DF10-4F6E-B2DA-415446DF87CD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson", "CoCo.Core.Configuration.NewtonsoftJson\CoCo.Core.Configuration.NewtonsoftJson.csproj", "{68404F43-CBCE-48CA-9392-E1E5C48A0913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson", "CrossCutting\Core\CoCo.Core.Configuration.NewtonsoftJson\CoCo.Core.Configuration.NewtonsoftJson.csproj", "{68404F43-CBCE-48CA-9392-E1E5C48A0913}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson.Test", "CoCo.Core.Configuration.NewtonsoftJson.Test\CoCo.Core.Configuration.NewtonsoftJson.Test.csproj", "{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoCo.Core.Configuration.NewtonsoftJson.Test", "CrossCutting\Core\CoCo.Core.Configuration.NewtonsoftJson.Test\CoCo.Core.Configuration.NewtonsoftJson.Test.csproj", "{52FC6157-6511-4D78-8B4A-2B9D8DB1305D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.ExceptionFormatter.Contract", "ExceptionFormatter.Contract\CrossCutting.ExceptionFormatter.Contract.csproj", "{393A6539-C220-4AD9-89CB-15C3EBA3217F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.ExceptionFormatter.Contract", "CrossCutting\CrossCutting.ExceptionFormatter.Contract\CrossCutting.ExceptionFormatter.Contract.csproj", "{393A6539-C220-4AD9-89CB-15C3EBA3217F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.ExceptionFormatter.SimpleListFormat", "ExceptionFormatter.SimpleListFormat\CrossCutting.ExceptionFormatter.SimpleListFormat.csproj", "{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting.ExceptionFormatter.SimpleListFormat", "CrossCutting\CrossCutting.ExceptionFormatter.SimpleListFormat\CrossCutting.ExceptionFormatter.SimpleListFormat.csproj", "{B3BF4A4A-A636-4F01-97DA-F74F367C4C0D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.SqLite", "GenericDataStoring.SqLite\Data.GenericDataStoring.SqLite.csproj", "{5B495267-8EE6-476E-AD6C-F7114EE96B92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.GenericDataStoring.SqLite", "Data\Data.GenericDataStoring.SqLite\Data.GenericDataStoring.SqLite.csproj", "{5B495267-8EE6-476E-AD6C-F7114EE96B92}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.GenericManager.Contract", "GenericManager.Contract\Logic.GenericManager.Contract.csproj", "{1AB393D5-3E9D-4983-A60D-002790CA8B88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.GenericManager.Contract", "Logic\GenericManager.Contract\Logic.GenericManager.Contract.csproj", "{1AB393D5-3E9D-4983-A60D-002790CA8B88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.GenericManager", "GenericManager\Logic.GenericManager.csproj", "{817FEABC-7F84-4971-9A44-49C4739144E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.GenericManager", "Logic\GenericManager\Logic.GenericManager.csproj", "{817FEABC-7F84-4971-9A44-49C4739144E3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{827EC198-75C9-43C0-8E8E-5824ED542C65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation.Contract", "Logic.Foundation.Translation.Contract\Logic.Foundation.Translation.Contract.csproj", "{9205EAF8-35E5-4339-BFB5-B4F5355B5227}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation.Contract", "Logic\Foundation\Logic.Foundation.Translation.Contract\Logic.Foundation.Translation.Contract.csproj", "{9205EAF8-35E5-4339-BFB5-B4F5355B5227}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation", "Logic.Foundation.Translation\Logic.Foundation.Translation.csproj", "{44C8FA20-A30C-4138-B279-59131A014832}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation", "Logic\Foundation\Logic.Foundation.Translation\Logic.Foundation.Translation.csproj", "{44C8FA20-A30C-4138-B279-59131A014832}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedActionExecution.Contract", "Logic.Foundation.DelayedDelegateExecutor.Contract\Logic.Foundation.DelayedActionExecution.Contract.csproj", "{6E46D195-9998-4D63-A3F9-752642948F3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedActionExecution.Contract", "Logic\Foundation\Logic.Foundation.DelayedDelegateExecutor.Contract\Logic.Foundation.DelayedActionExecution.Contract.csproj", "{6E46D195-9998-4D63-A3F9-752642948F3A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedActionExecution", "Logic.Foundation.DelayedDelegateExecutor\Logic.Foundation.DelayedActionExecution.csproj", "{D180677A-E6D6-4723-8F3A-DE60C9FC821C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedActionExecution", "Logic\Foundation\Logic.Foundation.DelayedDelegateExecutor\Logic.Foundation.DelayedActionExecution.csproj", "{D180677A-E6D6-4723-8F3A-DE60C9FC821C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D743AC65-1C2A-4A88-B973-28CE9D19A34A}"
 	ProjectSection(SolutionItems) = preProject
@@ -60,9 +60,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.FeatureTra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.FeatureTrackingComponent", "Logic\Foundation\Logic.Foundation.FeatureTrackingComponent\Logic.Foundation.FeatureTrackingComponent.csproj", "{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.ConsentManager", "Logic\Foundation\Logic.Foundation.ConsentManager\Logic.Foundation.ConsentManager.csproj", "{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.ConsentManager", "Logic\Foundation\Logic.Foundation.ConsentManager\Logic.Foundation.ConsentManager.csproj", "{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.ConsentManager.Contract", "Logic\Foundation\Logic.Foundation.ConsentManager.Contract\Logic.Foundation.ConsentManager.Contract.csproj", "{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.ConsentManager.Contract", "Logic\Foundation\Logic.Foundation.ConsentManager.Contract\Logic.Foundation.ConsentManager.Contract.csproj", "{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Orchestration.Contract", "Logic\Foundation\Logic.Foundation.Orchestration.Contract\Logic.Foundation.Orchestration.Contract.csproj", "{290702DB-63EB-4788-9AA7-B40D8E420839}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.WPF.ViewModelMapper.Contract", "UI\WPF\UI.WPF.ViewModelMapper.Contract\UI.WPF.ViewModelMapper.Contract.csproj", "{9227DA0B-DAF5-48CC-A783-4C629455130A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{6BF4E293-4BE5-4E06-9A0E-A5D20CD7E7EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Orchestration", "Logic\Foundation\Logic.Foundation.Orchestration\Logic.Foundation.Orchestration.csproj", "{67240409-C612-4C5D-AADD-70FA81AE9C2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.WPF.ViewModelMapper", "UI\WPF\UI.WPF.ViewModelMapper\UI.WPF.ViewModelMapper.csproj", "{FD18A87B-5748-4C6E-88B5-6128A7419C2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_externalLibraries", "_externalLibraries", "{0AB64F26-3CEF-4DC6-B7EC-6975B0BBC069}"
+	ProjectSection(SolutionItems) = preProject
+		_externalLibraries\CoCo.Core.Contract.dll = _externalLibraries\CoCo.Core.Contract.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,6 +173,22 @@ Global
 		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{290702DB-63EB-4788-9AA7-B40D8E420839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290702DB-63EB-4788-9AA7-B40D8E420839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290702DB-63EB-4788-9AA7-B40D8E420839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290702DB-63EB-4788-9AA7-B40D8E420839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9227DA0B-DAF5-48CC-A783-4C629455130A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9227DA0B-DAF5-48CC-A783-4C629455130A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9227DA0B-DAF5-48CC-A783-4C629455130A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9227DA0B-DAF5-48CC-A783-4C629455130A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67240409-C612-4C5D-AADD-70FA81AE9C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67240409-C612-4C5D-AADD-70FA81AE9C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67240409-C612-4C5D-AADD-70FA81AE9C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67240409-C612-4C5D-AADD-70FA81AE9C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD18A87B-5748-4C6E-88B5-6128A7419C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD18A87B-5748-4C6E-88B5-6128A7419C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD18A87B-5748-4C6E-88B5-6128A7419C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD18A87B-5748-4C6E-88B5-6128A7419C2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -187,6 +218,11 @@ Global
 		{A8BA528F-E393-4607-ABA6-ACE2CFB1B6B0} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{9D19F95B-384A-4BDF-A0DE-3AD8BCC71C7B} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{1AC7B442-6CAA-4DAF-8728-B189C3731A3D} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{290702DB-63EB-4788-9AA7-B40D8E420839} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{9227DA0B-DAF5-48CC-A783-4C629455130A} = {6BF4E293-4BE5-4E06-9A0E-A5D20CD7E7EE}
+		{6BF4E293-4BE5-4E06-9A0E-A5D20CD7E7EE} = {663EDA9A-F100-4B50-8D1C-20BE8EA2651E}
+		{67240409-C612-4C5D-AADD-70FA81AE9C2D} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{FD18A87B-5748-4C6E-88B5-6128A7419C2E} = {6BF4E293-4BE5-4E06-9A0E-A5D20CD7E7EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}

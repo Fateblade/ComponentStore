@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.FeatureTrackingComponent</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.FeatureTrackingComponent</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.Foundation.DelayedActionExecution.Contract</RootNamespace>
+    <AssemblyName>Components.Logic.Foundation.DelayedActionExecution.Contract</AssemblyName>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
@@ -11,13 +11,8 @@
   </Target>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Data\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
-    <ProjectReference Include="..\Logic.Foundation.FeatureTrackingComponent.Contract\Logic.Foundation.FeatureTrackingComponent.Contract.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="CoCo.Core.Contract">
-      <HintPath>..\..\..\_ExternalLibraries\CoCo.Core.Contract.dll</HintPath>
+      <HintPath>..\..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
     </Reference>
   </ItemGroup>
 

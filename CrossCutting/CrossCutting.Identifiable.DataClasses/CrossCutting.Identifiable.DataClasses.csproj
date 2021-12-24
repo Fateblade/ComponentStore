@@ -1,14 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.ConsentManager.Contract</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.ConsentManager.Contract</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Fateblade.Components.CrossCutting.Base.Identifiable.DataClasses</RootNamespace>
+    <AssemblyName>Components.CrossCutting.Base.Identifiable.DataClasses</AssemblyName>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="DataClasses\" />
-  </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy &quot;$(TargetDir)*.*&quot; &quot;D:\Github\Alexandria\_ExternalLibraries\&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)*.*&quot; &quot;D:\Github\testspace_dsa\_ExternalComponents&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)*.*&quot; &quot;D:\Github\TCSPD\_externalLibraries&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)*.*&quot;  D:\Github\testspace_starfinder\_externalLibraries /F /R /I /E /Y" />

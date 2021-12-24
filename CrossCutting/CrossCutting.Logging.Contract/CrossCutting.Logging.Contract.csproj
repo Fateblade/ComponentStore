@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.ConsentManager.Contract</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.ConsentManager.Contract</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Components.CrossCutting.Logging.Contract</AssemblyName>
+    <RootNamespace>Fateblade.Components.CrossCutting.Logging.Contract</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataClasses\" />
+    <Folder Include="Messages\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

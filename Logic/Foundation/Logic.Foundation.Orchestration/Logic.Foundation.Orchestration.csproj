@@ -2,12 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.ConsentManager.Contract</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.ConsentManager.Contract</AssemblyName>
+    <AssemblyName>Components.Logic.Foundation.Orchestration</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.Foundation.Orchestration</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataClasses\" />
+    <ProjectReference Include="..\Logic.Foundation.Orchestration.Contract\Logic.Foundation.Orchestration.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+      <HintPath>..\..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
