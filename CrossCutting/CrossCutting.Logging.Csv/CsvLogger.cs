@@ -76,7 +76,7 @@ namespace Fateblade.Components.CrossCutting.Logging.Csv
                     //if any performance problems occur, maybe use a stringbuilder and write a single time to file
                     for (int i = 0; i < _bufferPosition; ++i)
                     {
-                        writer.WriteLine($"{_buffer[i].Timestamp}{_buffer[i].Priority};{_buffer[i].Type};{_buffer[i].Message}");
+                        writer.WriteLine($"{_buffer[i].Timestamp};{_buffer[i].Priority};{_buffer[i].Type};{_buffer[i].Message}");
                     }
                 }
             }
