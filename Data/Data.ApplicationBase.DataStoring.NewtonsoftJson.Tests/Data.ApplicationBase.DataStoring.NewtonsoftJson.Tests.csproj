@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Components.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Fateblade.Components.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.6.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="Moq" Version="4.13.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\CrossCutting.ApplicationBase\CrossCutting.ApplicationBase.csproj" />
+    <ProjectReference Include="..\Data.ApplicationBase.DataStoring.Contract\Data.ApplicationBase.DataStoring.Contract.csproj" />
+    <ProjectReference Include="..\Data.ApplicationBase.DataStoring.NewtonsoftJson\Data.ApplicationBase.DataStoring.NewtonsoftJson.csproj" />
+  </ItemGroup>
+
+</Project>
