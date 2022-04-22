@@ -19,6 +19,8 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
         private List<TEntity> _entities;
         private readonly string _rootPath;
         private readonly string _completePath;
+        private bool _justSentMessage;
+
 
 
         //properties
@@ -40,9 +42,10 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
 
 
             initializeEntitiesFromFile();
+            _eventBroker.Subscribe<EntityChangedMessage>(handleEntityChangedMessage);
         }
-
         
+
 
         //public methods
         public void Add(TEntity entity)
@@ -51,6 +54,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
             _entities.Add(entity);
             save();
 
+            _justSentMessage = true;
             _eventBroker.Raise(new EntityChangedMessage<TEntity>
             {
                 ChangeType = ChangeType.Created,
@@ -64,6 +68,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
             _entities[indexOfEntity] = entity;
             save();
 
+            _justSentMessage = true;
             _eventBroker.Raise(new EntityChangedMessage<TEntity>
             {
                 ChangeType = ChangeType.Updated,
@@ -77,6 +82,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
             _entities.RemoveAt(indexOfEntity);
             save();
 
+            _justSentMessage = true;
             _eventBroker.Raise(new EntityChangedMessage<TEntity>
             {
                 ChangeType = ChangeType.Removed,
@@ -118,6 +124,73 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
         private int getIndexOfEntity(TEntity entityToFind)
         {
             return _entities.FindIndex(entity => entity.Id.Equals(entityToFind.Id));
+        }
+
+        private void handleEntityChangedMessage(EntityChangedMessage entityChangedMessage)
+        {
+            if (!(entityChangedMessage.Entity is TEntity castedEntity))
+            {
+                return;
+            }
+            
+            if (_justSentMessage)
+            {
+                _justSentMessage = false;
+                return;
+            }
+
+            switch (entityChangedMessage.ChangeType)
+            {
+                case ChangeType.Created:
+                    handleEntityAdded(castedEntity);
+                    break;
+                case ChangeType.Updated:
+                    handleEntityUpdated(castedEntity);
+                    break;
+                case ChangeType.Removed:
+                    handleEntityRemoved(castedEntity); 
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException($"Unknown change type '{entityChangedMessage.ChangeType}'");
+            }
+        }
+
+        private void handleEntityRemoved(TEntity entity)
+        {
+            var indexOfEntity = getIndexOfEntity(entity);
+            if (indexOfEntity == -1) return;
+
+            _entities.RemoveAt(indexOfEntity);
+            //save not necessary because it was already saved by the sender of this message
+        }
+
+        private void handleEntityUpdated(TEntity entity)
+        {
+            var indexOfEntity = getIndexOfEntity(entity);
+            if (indexOfEntity == -1)
+            {
+                handleEntityAdded(entity);
+                return;
+            }
+
+            _entities[indexOfEntity] = entity;
+            //save not necessary because it was already saved by the sender of this message
+        }
+
+        private void handleEntityAdded(TEntity entity)
+        {
+            if (entity.Id == Guid.Empty) throw new ArgumentException($"Added entity has to have a valid id", nameof(entity.Id));
+            
+            var indexOfEntity = getIndexOfEntity(entity);
+            if (indexOfEntity != -1)
+            {
+                handleEntityUpdated(entity);
+                return;
+            }
+
+            _entities.Add(entity);
+
+            //save not necessary because it was already saved by the sender of this message
         }
     }
 }
