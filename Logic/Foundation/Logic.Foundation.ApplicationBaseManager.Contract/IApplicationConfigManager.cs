@@ -8,7 +8,9 @@ namespace Fateblade.Components.Logic.Foundation.ApplicationBaseManager.Contract
     public interface IApplicationConfigManager
     {
         void SetEntry(string key, ConfigElement entry);
+        bool HasEntry(string key);
         ConfigElement GetEntry(string key);
+        ConfigElement GetOrCreateEntry(string key);
 
         void SaveApplicationConfig();
         void ReloadApplicationConfig();

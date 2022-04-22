@@ -20,6 +20,11 @@ namespace Fateblade.Components.Logic.Foundation.ApplicationBaseManager
             ReloadApplicationConfig();
         }
 
+        public bool HasEntry(string key)
+        {
+            return _config.ConfiguredElements.ContainsKey(key);
+        }
+
         public void SetEntry(string key, ConfigElement entry)
         {
             if (entry == null) throw new ArgumentNullException(nameof(entry));
@@ -29,9 +34,19 @@ namespace Fateblade.Components.Logic.Foundation.ApplicationBaseManager
 
         public ConfigElement GetEntry(string key)
         {
-            if (!_config.ConfiguredElements.ContainsKey(key))
+            if (!HasEntry(key))
             {
                 throw new ArgumentException($"Config does not contain key '{key}'", nameof(key));
+            }
+
+            return _config.ConfiguredElements[key];
+        }
+        
+        public ConfigElement GetOrCreateEntry(string key)
+        {
+            if (!HasEntry(key))
+            {
+                _config.ConfiguredElements[key] = new ConfigElement();
             }
 
             return _config.ConfiguredElements[key];
