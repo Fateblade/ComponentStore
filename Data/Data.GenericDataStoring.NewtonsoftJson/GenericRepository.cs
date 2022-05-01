@@ -42,7 +42,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
 
 
             initializeEntitiesFromFile();
-            _eventBroker.Subscribe<EntityChangedMessage>(handleEntityChangedMessage);
+            _eventBroker.Subscribe<EntityChangedMessage<TEntity>>(handleEntityChangedMessage);
         }
         
 
@@ -126,13 +126,8 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
             return _entities.FindIndex(entity => entity.Id.Equals(entityToFind.Id));
         }
 
-        private void handleEntityChangedMessage(EntityChangedMessage entityChangedMessage)
+        private void handleEntityChangedMessage(EntityChangedMessage<TEntity> entityChangedMessage)
         {
-            if (!(entityChangedMessage.Entity is TEntity castedEntity))
-            {
-                return;
-            }
-            
             if (_justSentMessage)
             {
                 _justSentMessage = false;
@@ -142,13 +137,13 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
             switch (entityChangedMessage.ChangeType)
             {
                 case ChangeType.Created:
-                    handleEntityAdded(castedEntity);
+                    handleEntityAdded(entityChangedMessage.Entity);
                     break;
                 case ChangeType.Updated:
-                    handleEntityUpdated(castedEntity);
+                    handleEntityUpdated(entityChangedMessage.Entity);
                     break;
                 case ChangeType.Removed:
-                    handleEntityRemoved(castedEntity); 
+                    handleEntityRemoved(entityChangedMessage.Entity); 
                     break;
                 default:
                     throw new ArgumentOutOfRangeException($"Unknown change type '{entityChangedMessage.ChangeType}'");
