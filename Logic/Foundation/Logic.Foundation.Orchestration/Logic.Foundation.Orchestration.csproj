@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Components.Logic.Foundation.Orchestration</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.Foundation.Orchestration</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Logic.Foundation.Orchestration.Contract\Logic.Foundation.Orchestration.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+      <HintPath>..\..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetName).*&quot; &quot;D:\Github\Alexandria\_ExternalLibraries\&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).*&quot; &quot;D:\Github\testspace_dsa\_ExternalComponents&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).*&quot; &quot;D:\Github\TCSPD\_externalLibraries&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).*&quot;  D:\Github\testspace_starfinder\_externalLibraries /F /R /I /E /Y" />
+  </Target>
+
+</Project>

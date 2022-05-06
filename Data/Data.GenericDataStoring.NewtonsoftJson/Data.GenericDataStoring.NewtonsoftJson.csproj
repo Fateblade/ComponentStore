@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson</RootNamespace>
+    <AssemblyName>Components.Data.GenericDataStoring.NewtonsoftJson</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\CrossCutting.Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj" />
+    <ProjectReference Include="..\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+      <HintPath>..\..\_externalLibraries\CoCo.Core.Contract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetName).*&quot; &quot;D:\Github\Alexandria\_ExternalLibraries\&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).*&quot; &quot;D:\Github\testspace_dsa\_ExternalComponents&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).*&quot; &quot;D:\Github\TCSPD\_externalLibraries&quot; /F /R /I /E /Y&#xD;&#xA;xcopy &quot;$(TargetDir)$(TargetName).*&quot;  D:\Github\testspace_starfinder\_externalLibraries /F /R /I /E /Y" />
+  </Target>
+
+</Project>
