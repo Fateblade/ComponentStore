@@ -53,7 +53,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedAct
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D743AC65-1C2A-4A88-B973-28CE9D19A34A}"
 	ProjectSection(SolutionItems) = preProject
-		..\_Build\FatebladeProjectDefaultsImport.msb.xml = ..\_Build\FatebladeProjectDefaultsImport.msb.xml
+		FatebladeProjectDefaultsImport.msb.xml = FatebladeProjectDefaultsImport.msb.xml
 		ToDo.md = ToDo.md
 	EndProjectSection
 EndProject
