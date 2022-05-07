@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+	<Import Project="..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Components.Data.GenericDataStoring.SqLite</AssemblyName>

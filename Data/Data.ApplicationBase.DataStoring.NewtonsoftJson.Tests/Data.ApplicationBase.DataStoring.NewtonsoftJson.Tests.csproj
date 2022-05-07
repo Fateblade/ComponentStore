@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+	<Import Project="..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
   <PropertyGroup>
 	  <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>Components.$(MSBuildProjectName)</AssemblyName>
