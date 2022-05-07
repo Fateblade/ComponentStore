@@ -85,7 +85,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.ApplicationBase.DataSt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.ApplicationBaseManager.Contract", "Logic\Foundation\Logic.Foundation.ApplicationBaseManager.Contract\Logic.Foundation.ApplicationBaseManager.Contract.csproj", "{75DD2632-7B30-4CA0-B3B4-22DD4A535D23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.ApplicationBaseManager", "Logic.Foundation.ApplicationBaseManager\Logic.Foundation.ApplicationBaseManager.csproj", "{55B40DCD-373F-4276-A83E-DEC081C46C28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.ApplicationBaseManager", "Logic\Foundation\Logic.Foundation.ApplicationBaseManager\Logic.Foundation.ApplicationBaseManager.csproj", "{55B40DCD-373F-4276-A83E-DEC081C46C28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

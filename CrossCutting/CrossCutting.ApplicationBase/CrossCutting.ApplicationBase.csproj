@@ -4,7 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Components.$(MSBuildProjectName)</AssemblyName>
     <RootNamespace>Fateblade.Components.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-	  <OutputPath>$(LocalDllDir)</OutputPath>
   </PropertyGroup>
 
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<CallTarget Targets="CopyProjectToDll" />
+	</Target>
 </Project>

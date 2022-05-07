@@ -4,7 +4,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Components.CrossCutting.ExceptionFormatter.SimpleListFormat</AssemblyName>
     <RootNamespace>Fateblade.Components.CrossCutting.ExceptionFormatter.SimpleListFormat</RootNamespace>
-	  <OutputPath>$(LocalDllDir)</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,8 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CoCo.Core.Contract">
-    </Reference>
+    <Reference Include="CoCo.Core.Contract" />
   </ItemGroup>
 
+    
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<CallTarget Targets="CopyProjectToDll" />
+	</Target>
 </Project>

@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Fateblade.Components.Logic.Foundation.DelayedActionExecution</RootNamespace>
-    <AssemblyName>Components.Logic.Foundation.DelayedActionExecution</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Components.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Fateblade.Components.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\CrossCutting\CrossCutting.ExceptionFormatter.Contract\CrossCutting.ExceptionFormatter.Contract.csproj" />
     <ProjectReference Include="..\..\..\CrossCutting\CrossCutting.Logging.Contract\CrossCutting.Logging.Contract.csproj" />
-    <ProjectReference Include="..\Logic.Foundation.DelayedDelegateExecutor.Contract\Logic.Foundation.DelayedActionExecution.Contract.csproj" />
+    <ProjectReference Include="..\..\..\Data\Data.ApplicationBase.DataStoring.Contract\Data.ApplicationBase.DataStoring.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Foundation.ApplicationBaseManager.Contract\Logic.Foundation.ApplicationBaseManager.Contract.csproj" />
   </ItemGroup>
 
   <ItemGroup>

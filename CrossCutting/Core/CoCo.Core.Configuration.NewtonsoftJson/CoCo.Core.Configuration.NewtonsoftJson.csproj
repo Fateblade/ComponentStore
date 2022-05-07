@@ -4,7 +4,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Fateblade.Components.CrossCutting.CoCo.Core.Configuration.NewtonsoftJson</RootNamespace>
     <AssemblyName>Components.CrossCutting.CoCo.Core.Configuration.NewtonsoftJson</AssemblyName>
-	  <OutputPath>$(LocalDllDir)</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,5 +13,8 @@
   <ItemGroup>
     <Reference Include="CoCo.Core.Contract" />
   </ItemGroup>
-
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<CallTarget Targets="CopyProjectToDll" />
+	</Target>
 </Project>

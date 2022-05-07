@@ -4,8 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Fateblade.Components.CrossCutting.Base.Identifiable.DataClasses</RootNamespace>
     <AssemblyName>Components.CrossCutting.Base.Identifiable.DataClasses</AssemblyName>
-	  <OutputPath>$(LocalDllDir)</OutputPath>
   </PropertyGroup>
 
 
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<CallTarget Targets="CopyProjectToDll" />
+	</Target>
 </Project>

@@ -1,17 +1,11 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<LocalDllDir Condition="'$(LocalDllDir)' == ''">C:\GitHub\_dlls</LocalDllDir>
+		<LocalDllDir Condition="'$(LocalDllDir)' == ''">D:\Github\_dlls</LocalDllDir>
 
 		<FatebladeReferencePath Condition="'$(FatebladeReferencePath)' == ''">$(LocalDllDir)</FatebladeReferencePath>
-		<ReferencePath Condition="'$(FatebladeReferencePath)' != ''">$(FatebladeReferencePath);$(ReferencePath)</ReferencePath>
+		<NetFrameworkReferencePath Condition="'$(NetFrameworkReferencePath)' == ''">C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\5.0.0\ref\net5.0\</NetFrameworkReferencePath>
+		<ReferencePath Condition="'$(FatebladeReferencePath)' != ''">$(FatebladeReferencePath);$(NetFrameworkReferencePath);$(ReferencePath)</ReferencePath>
 	</PropertyGroup>
-
-	<!-- 
-    <Target Name="BeforeResolveReferences">
-        <CreateProperty Value="$(LocalDllDir);$(AssemblySearchPaths)">
-            <Output TaskParameter="Value" PropertyName="AssemblySearchPaths" />
-        </CreateProperty>
-    </Target> -->
 
 	<Target Name="AddReferencePathToAssemblySearchPaths" BeforeTargets="ResolveAssemblyReferences">
 		<PropertyGroup>
@@ -25,9 +19,20 @@
 
 	<Target Name="CopyProjectToDll">
 		<ItemGroup>
-			<OutputFilesToCopy Include="@(BuiltProjectOutputGroupOutput);@(DebugSymbolsProjectOutputGroupOutput);@(DocumentationProjectOutputGroupOutput)" />
+			<OutputFilesToCopy Include="$(TargetDir)$(AssemblyName).dll" />
+			<OutputFilesToCopy Include="$(TargetDir)$(AssemblyName).pdb" />
 		</ItemGroup>
 
 		<Copy SourceFiles="@(OutputFilesToCopy)" DestinationFolder="$(LocalDllDir)" />
 	</Target>
 </Project>
+
+<!--
+	Relative path (adjust accordingly) to import in project file
+	<Import Project="..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
+
+	PostBuildEvent to copy dlls to include in project file
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<CallTarget Targets="CopyProjectToDll" />
+	</Target>
+-->
