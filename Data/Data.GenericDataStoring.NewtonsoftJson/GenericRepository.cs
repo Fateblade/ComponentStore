@@ -35,7 +35,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
             _configuration = configuration;
 
             _rootPath = String.IsNullOrWhiteSpace(_configuration.RootDirectoryPath)
-                ? Directory.GetCurrentDirectory()
+                ? Path.Combine(Directory.GetCurrentDirectory(), "Data")
                 : _configuration.RootDirectoryPath;
 
             _completePath = Path.Combine(_rootPath, _fileName);
