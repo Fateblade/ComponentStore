@@ -7,22 +7,23 @@ using System.Resources;
 
 namespace Fateblade.Components.Logic.Foundation.Translation
 {
-    internal class TranslationStringProvider : ITranslationStringProvider
+    internal class ResourceFileTranslationStringProvider : ITranslationStringProvider
     {
         private readonly Dictionary<string, Dictionary<string, string>> _knownStringResources;
         private readonly List<ResourceFilePathInfo> _knownResourceFilePaths;
         private string _defaultLanguageKey;
 
-        public TranslationStringProvider()
+        public ResourceFileTranslationStringProvider()
         {
             _knownStringResources = new Dictionary<string, Dictionary<string, string>>();
             _knownResourceFilePaths = new List<ResourceFilePathInfo>();
+            _defaultLanguageKey = "de";
         }
 
-        public TranslationStringProvider(string defaultLanguageKey) : this()
-        {
-            _defaultLanguageKey = defaultLanguageKey;
-        }
+        //public ResourceFileTranslationStringProvider(string defaultLanguageKey) : this()
+        //{
+        //    _defaultLanguageKey = defaultLanguageKey;
+        //}
 
         public void ChangeDefaultLanguage(string newDefaultLanguageKey)
         {
@@ -37,14 +38,13 @@ namespace Fateblade.Components.Logic.Foundation.Translation
         public void LoadStringResourcesForLanguage(string resourceFileName, string languageKeyForContainedStrings)
         {
             var assembly = Assembly.GetCallingAssembly();
-            var resourcePath = string.Empty;
 
-            resourcePath = assembly.GetManifestResourceNames().FirstOrDefault(t => t.Contains(resourceFileName));
+            var resourcePath = assembly.GetManifestResourceNames().FirstOrDefault(t => t.Contains(resourceFileName));
             if (string.IsNullOrWhiteSpace(resourcePath)) { throw new ArgumentException("Resource file not found for given name", nameof(resourceFileName)); }
 
             if (resourcePath.EndsWith(".resources"))
             {
-                resourcePath = resourcePath.Substring(0, resourcePath.Length - ".resources".Length);
+                resourcePath = resourcePath[..^".resources".Length]; //resourcePath = resourcePath.Substring(0, resourcePath.Length - ".resources".Length);
             }
 
             _knownResourceFilePaths.Add(new ResourceFilePathInfo()

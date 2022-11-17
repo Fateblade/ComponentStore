@@ -27,7 +27,7 @@ namespace Fateblade.Components.Logic.Foundation.Translation
 
         public void RegisterMappings(ICoCoKernel kernel)
         {
-            kernel.Register<ITranslationStringProvider, TranslationStringProvider>(RegisterScope.Unique);
+            kernel.Register<ITranslationStringProvider, ResourceFileTranslationStringProvider>(RegisterScope.Unique);
         }
 
         public void AddMessageSubscriptions(IEventBroker broker)

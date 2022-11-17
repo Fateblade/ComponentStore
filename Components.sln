@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation.Contract", "Logic\Foundation\Logic.Foundation.Translation.Contract\Logic.Foundation.Translation.Contract.csproj", "{9205EAF8-35E5-4339-BFB5-B4F5355B5227}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation", "Logic\Foundation\Logic.Foundation.Translation\Logic.Foundation.Translation.csproj", "{44C8FA20-A30C-4138-B279-59131A014832}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Translation.ResourceFile", "Logic\Foundation\Logic.Foundation.Translation\Logic.Foundation.Translation.ResourceFile.csproj", "{44C8FA20-A30C-4138-B279-59131A014832}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.DelayedActionExecution.Contract", "Logic\Foundation\Logic.Foundation.DelayedDelegateExecutor.Contract\Logic.Foundation.DelayedActionExecution.Contract.csproj", "{6E46D195-9998-4D63-A3F9-752642948F3A}"
 EndProject
