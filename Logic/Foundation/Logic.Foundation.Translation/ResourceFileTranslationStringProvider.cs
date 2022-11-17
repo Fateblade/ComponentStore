@@ -37,7 +37,7 @@ namespace Fateblade.Components.Logic.Foundation.Translation
 
         public void LoadStringResourcesForLanguage(string resourceFileName, string languageKeyForContainedStrings)
         {
-            var assembly = Assembly.GetCallingAssembly();
+            var assembly = Assembly.GetEntryAssembly();
 
             var resourcePath = assembly.GetManifestResourceNames().FirstOrDefault(t => t.Contains(resourceFileName));
             if (string.IsNullOrWhiteSpace(resourcePath)) { throw new ArgumentException("Resource file not found for given name", nameof(resourceFileName)); }
