@@ -36,6 +36,7 @@ namespace Fateblade.Components.Logic.Foundation.Translation
 
         public void Configure(IConfigurator config)
         {
+
         }
     }
 }

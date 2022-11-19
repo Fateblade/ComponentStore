@@ -87,6 +87,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.Applicatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.ApplicationBaseManager", "Logic\Foundation\Logic.Foundation.ApplicationBaseManager\Logic.Foundation.ApplicationBaseManager.csproj", "{55B40DCD-373F-4276-A83E-DEC081C46C28}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{8BB82621-A64D-4FDE-BE4B-901784B3C661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snippets", "Snippets\Snippets.csproj", "{A4B7028D-3632-4909-AD44-4BB29DED6206}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -221,6 +225,10 @@ Global
 		{55B40DCD-373F-4276-A83E-DEC081C46C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55B40DCD-373F-4276-A83E-DEC081C46C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55B40DCD-373F-4276-A83E-DEC081C46C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4B7028D-3632-4909-AD44-4BB29DED6206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B7028D-3632-4909-AD44-4BB29DED6206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B7028D-3632-4909-AD44-4BB29DED6206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B7028D-3632-4909-AD44-4BB29DED6206}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -261,6 +269,7 @@ Global
 		{562E274F-9844-478E-BDC3-0E3F8EAA2B93} = {0937C992-5F3C-494D-95B4-F102C8450F74}
 		{75DD2632-7B30-4CA0-B3B4-22DD4A535D23} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{55B40DCD-373F-4276-A83E-DEC081C46C28} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{A4B7028D-3632-4909-AD44-4BB29DED6206} = {8BB82621-A64D-4FDE-BE4B-901784B3C661}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
