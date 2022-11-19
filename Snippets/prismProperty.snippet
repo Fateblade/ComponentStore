@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>prismProperty</Title>
+      <Author>Fateblade</Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>propbprism</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>Property</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[private $type$ _$name$;
+public $type$ $name$     
+{
+    get => _$name$;
+    set => SetProperty(ref _$name$, value);
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
