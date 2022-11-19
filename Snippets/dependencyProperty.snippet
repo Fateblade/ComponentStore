@@ -37,7 +37,7 @@
       <Code Language="csharp" Delimiter="$">
 		<![CDATA[public $type$ $name$
         {
-            get => (int)GetValue($name$Property); 
+            get => ($type$)GetValue($name$Property); 
             set => SetValue($name$Property, value); 
         }
         public static readonly DependencyProperty $name$Property =
