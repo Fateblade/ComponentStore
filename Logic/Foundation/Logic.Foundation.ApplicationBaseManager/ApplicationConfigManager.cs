@@ -52,6 +52,14 @@ namespace Fateblade.Components.Logic.Foundation.ApplicationBaseManager
             return _config.ConfiguredElements[key];
         }
 
+        public void DeleteEntry(string key)
+        {
+            if (HasEntry(key))
+            {
+                _config.ConfiguredElements.Remove(key);
+            }
+        }
+
         public void SaveApplicationConfig()
         {
             _repository.Save(_config);
