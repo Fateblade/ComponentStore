@@ -12,6 +12,8 @@ namespace Fateblade.Components.Logic.Foundation.ApplicationBaseManager.Contract
         ConfigElement GetEntry(string key);
         ConfigElement GetOrCreateEntry(string key);
 
+        void DeleteEntry(string key);
+
         void SaveApplicationConfig();
         void ReloadApplicationConfig();
     }
