@@ -9,6 +9,7 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper
     internal class ViewModelDataTemplateMapper : IViewModelDataTemplateMapper
     {
         private readonly Dictionary<Type, DataTemplate> _dataTemplateDictionary;
+        private bool _allowBaseTypeFallback;
 
 
 
@@ -60,12 +61,12 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper
 
         public DataTemplate GetMapping<TType>()
         {
-            return GetMapping(typeof(TType), false);
+            return GetMapping(typeof(TType), _allowBaseTypeFallback);
         }
 
         public DataTemplate GetMapping(Type viewModelType)
         {
-            return GetMapping(viewModelType, false);
+            return GetMapping(viewModelType, _allowBaseTypeFallback);
         }
 
         public DataTemplate GetMapping<TType>(bool allowBaseTypeFallback)
@@ -93,6 +94,11 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper
         public void RemoveMapping(Type viewModelType)
         {
             _dataTemplateDictionary.Remove(viewModelType);
+        }
+
+        public void SetDefaultBaseTypeFallback(bool allowBaseTypeFallback)
+        {
+            _allowBaseTypeFallback = allowBaseTypeFallback;
         }
     }
 }

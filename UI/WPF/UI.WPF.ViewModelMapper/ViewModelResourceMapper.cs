@@ -8,6 +8,7 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper
     internal class ViewModelResourceKeyMapper : IViewModelResourceKeyMapper
     {
         private readonly Dictionary<Type, string> _dictionary;
+        private bool _allowBaseTypeFallback;
 
 
 
@@ -68,12 +69,12 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper
 
         public string GetMapping<TType>()
         {
-            return GetMapping(typeof(TType), false);
+            return GetMapping(typeof(TType), _allowBaseTypeFallback);
         }
 
         public string GetMapping(Type type)
         {
-            return GetMapping(type, false);
+            return GetMapping(type, _allowBaseTypeFallback);
         }
 
         public string GetMapping<TType>(bool allowBaseTypeFallback)
@@ -101,6 +102,11 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper
         public void RemoveMapping(Type vmType)
         {
             _dictionary.Remove(vmType);
+        }
+
+        public void SetDefaultBaseTypeFallback(bool allowBaseTypeFallback)
+        {
+            _allowBaseTypeFallback = allowBaseTypeFallback;
         }
     }
 }

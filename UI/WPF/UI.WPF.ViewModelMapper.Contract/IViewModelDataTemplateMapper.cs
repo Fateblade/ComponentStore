@@ -23,5 +23,7 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper.Contract
 
         void RemoveMapping<TType>();
         void RemoveMapping(Type vmType);
+
+        void SetDefaultBaseTypeFallback(bool allowBaseTypeFallback);
     }
 }
