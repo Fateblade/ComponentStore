@@ -13,17 +13,9 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper.Contract.Exceptions
         //    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp07192001.asp
         //
 
-        public ViewModelMappingAlreadyExistsException()
-        {
-        }
-
-        public ViewModelMappingAlreadyExistsException(string message) : base(message)
-        {
-        }
-
-        public ViewModelMappingAlreadyExistsException(string message, Exception inner) : base(message, inner)
-        {
-        }
+        public ViewModelMappingAlreadyExistsException(Type viewModelTypeOfAlreadyExistingMapping)
+        : base ($"Mapping already exists for view model of type '{viewModelTypeOfAlreadyExistingMapping}'")
+        { }
 
         protected ViewModelMappingAlreadyExistsException(
             SerializationInfo info,

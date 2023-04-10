@@ -26,8 +26,11 @@ namespace Fateblade.Components.UI.WPF.ViewModelMapper
 
         public void RegisterMappings(ICoCoKernel kernel)
         {
-            ViewModelMapper instance = new ViewModelMapper();
-            kernel.RegisterUnique<IViewModelMapper, ViewModelMapper>(instance);
+            ViewModelDataTemplateMapper instance = new ViewModelDataTemplateMapper();
+            kernel.RegisterUnique<IViewModelDataTemplateMapper, ViewModelDataTemplateMapper>(instance);
+
+            ViewModelResourceKeyMapper resourceKeyMapper = new ViewModelResourceKeyMapper();
+            kernel.RegisterUnique<IViewModelResourceKeyMapper, ViewModelResourceKeyMapper>(resourceKeyMapper);
         }
 
         public void AddMessageSubscriptions(IEventBroker broker)
