@@ -351,3 +351,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/UI/UI.Console.OcrTester/samples/2024-02-17_11.18.31.pdf

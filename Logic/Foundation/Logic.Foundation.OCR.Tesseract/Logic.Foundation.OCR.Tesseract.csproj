@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Fateblade.Components.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName>Components.$(MSBuildProjectName)</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="8.0.3" />
+    <PackageReference Include="Portable.Ghostscript.NET" Version="1.2.3" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+    <PackageReference Include="Tesseract.Drawing" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CrossCutting\CrossCutting.ExceptionFormatter.Contract\CrossCutting.ExceptionFormatter.Contract.csproj" />
+    <ProjectReference Include="..\..\..\CrossCutting\CrossCutting.Logging.Contract\CrossCutting.Logging.Contract.csproj" />
+    <ProjectReference Include="..\Logic.Foundation.OCR.Contract\Logic.Foundation.OCR.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="tessdata\deu.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tessdata\deu_frak.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tessdata\eng.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tessdata\pdf.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tessdata_best\deu.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tessdata_best\pdf.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="tessdata_best\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <CallTarget Targets="CopyProjectToDll" />
+  </Target>
+</Project>

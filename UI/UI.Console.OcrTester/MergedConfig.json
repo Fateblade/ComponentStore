@@ -1,0 +1,23 @@
+[
+  {
+    "Category": "DataStoring.Generic.Json",
+    "Key": "RootPath",
+    "Value": "",
+    "Persist": true,
+    "ValueType": "System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+  },
+  {
+    "Category": "Logging",
+    "Key": "MessageBufferCount",
+    "Value": 10,
+    "Persist": true,
+    "ValueType": "System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+  },
+  {
+    "Category": "Logging",
+    "Key": "FullPathToLogFile",
+    "Value": "",
+    "Persist": true,
+    "ValueType": "System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+  }
+]
