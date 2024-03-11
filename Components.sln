@@ -95,11 +95,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{F3A4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.Console.JsonDataModifier", "UI\Console\UI.Console.JsonDataModifier\UI.Console.JsonDataModifier.csproj", "{DE78E4DC-B033-4FB7-A711-B6BB8151B957}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.OCR.Tesseract", "Logic\Foundation\Logic.Foundation.OCR.Tesseract\Logic.Foundation.OCR.Tesseract.csproj", "{5ECA331D-EBD8-4419-8DC3-3DC88E698DDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.OCR.Tesseract", "Logic\Foundation\Logic.Foundation.OCR.Tesseract\Logic.Foundation.OCR.Tesseract.csproj", "{5ECA331D-EBD8-4419-8DC3-3DC88E698DDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.OCR.Contract", "Logic\Foundation\Logic.Foundation.OCR.Contract\Logic.Foundation.OCR.Contract.csproj", "{889DE67A-9243-45FB-B293-BFBB698A5487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.OCR.Contract", "Logic\Foundation\Logic.Foundation.OCR.Contract\Logic.Foundation.OCR.Contract.csproj", "{889DE67A-9243-45FB-B293-BFBB698A5487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.Console.OcrTester", "UI\UI.Console.OcrTester\UI.Console.OcrTester.csproj", "{DAF469BE-D10E-44BB-8A9C-EBBDBE895C3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.Console.OcrTester", "UI\UI.Console.OcrTester\UI.Console.OcrTester.csproj", "{DAF469BE-D10E-44BB-8A9C-EBBDBE895C3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.CustomDateTime.Contract", "Logic\Foundation\Logic.Foundation.CustomDateTime.Contract\Logic.Foundation.CustomDateTime.Contract.csproj", "{F2520B6A-323C-4849-8A21-699AC3144E4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic.Foundation.CustomDateTime", "Logic\Foundation\Logic.Foundation.CustomDateTime\Logic.Foundation.CustomDateTime.csproj", "{81031F37-57BE-4A1A-9A71-F3DEE901837E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.Foundation.CustomDateTime.Tests", "Logic\Foundation\Logic.Foundation.CustomDateTime.Tests\Logic.Foundation.CustomDateTime.Tests.csproj", "{8D0DC76A-48D4-4B17-8FC0-D09AC1FE23E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -255,6 +261,18 @@ Global
 		{DAF469BE-D10E-44BB-8A9C-EBBDBE895C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAF469BE-D10E-44BB-8A9C-EBBDBE895C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAF469BE-D10E-44BB-8A9C-EBBDBE895C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2520B6A-323C-4849-8A21-699AC3144E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2520B6A-323C-4849-8A21-699AC3144E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2520B6A-323C-4849-8A21-699AC3144E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2520B6A-323C-4849-8A21-699AC3144E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81031F37-57BE-4A1A-9A71-F3DEE901837E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81031F37-57BE-4A1A-9A71-F3DEE901837E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81031F37-57BE-4A1A-9A71-F3DEE901837E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81031F37-57BE-4A1A-9A71-F3DEE901837E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D0DC76A-48D4-4B17-8FC0-D09AC1FE23E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0DC76A-48D4-4B17-8FC0-D09AC1FE23E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0DC76A-48D4-4B17-8FC0-D09AC1FE23E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0DC76A-48D4-4B17-8FC0-D09AC1FE23E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -301,6 +319,9 @@ Global
 		{5ECA331D-EBD8-4419-8DC3-3DC88E698DDB} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{889DE67A-9243-45FB-B293-BFBB698A5487} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 		{DAF469BE-D10E-44BB-8A9C-EBBDBE895C3E} = {F3A43F30-2631-43C3-B476-47DDDA3C413B}
+		{F2520B6A-323C-4849-8A21-699AC3144E4F} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{81031F37-57BE-4A1A-9A71-F3DEE901837E} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
+		{8D0DC76A-48D4-4B17-8FC0-D09AC1FE23E0} = {827EC198-75C9-43C0-8E8E-5824ED542C65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F118C073-FCDE-4479-8037-181ACC2173CA}
