@@ -27,12 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
-    <ProjectReference Include="..\Data.GenericDataStoring.SqLite\Data.GenericDataStoring.SqLite.csproj" />
+    <ProjectReference Include="..\Data.GenericDataStoring.MariaDb\Data.GenericDataStoring.MariaDb.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CoCo.Core.Contract"/>
+    <Reference Include="CoCo.Core.Contract" />
   </ItemGroup>
 
   <ItemGroup>
