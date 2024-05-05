@@ -7,7 +7,7 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime
     {
         public ITimeMachine Create(params DateTimeUnit[] units)
         {
-            
+            return new TimeMachine();
         }
     }
 }

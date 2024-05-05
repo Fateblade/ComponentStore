@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentAssertions;
+﻿using FluentAssertions;
+using NUnit.Framework;
 
 namespace Fateblade.Components.Logic.Foundation.CustomDateTime.Tests
 {
-    
+    [TestFixture]
     internal class ICustomDateTimeFormatterTests
     {
         [Test]
