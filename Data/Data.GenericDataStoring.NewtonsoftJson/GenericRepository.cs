@@ -50,8 +50,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
         //public methods
         public void Add(TEntity entity)
         {
-            entity.Id = Guid.NewGuid();
-            _entities.Add(entity);
+            generateIdAndAddEntity(entity);
             save();
 
             _justSentMessage = true;
@@ -59,6 +58,22 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
             {
                 ChangeType = ChangeType.Created,
                 Entity = entity
+            });
+        }
+
+        public void AddRange(IEnumerable<TEntity> entities)
+        {
+            foreach (var entity in entities)
+            {
+                generateIdAndAddEntity(entity);
+            }
+            save();
+
+            _justSentMessage = true;
+            _eventBroker.Raise(new EntitiesChangedMessage<TEntity>
+            {
+                ChangeType = ChangeType.Created,
+                Entity = entities
             });
         }
 
@@ -111,6 +126,12 @@ namespace Fateblade.Components.Data.GenericDataStoring.NewtonsoftJson
                     _entities = JsonConvert.DeserializeObject<List<TEntity>>(sr.ReadToEnd());
                 }
             }
+        }
+
+        private void generateIdAndAddEntity(TEntity entity)
+        {
+            entity.Id = Guid.NewGuid();
+            _entities.Add(entity);
         }
 
         private void save()

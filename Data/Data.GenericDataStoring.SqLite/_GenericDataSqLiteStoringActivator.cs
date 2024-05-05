@@ -4,6 +4,9 @@ using DavidTielke.PersonManagementApp.CrossCutting.CoCo.Core.Contract.Dependency
 using DavidTielke.PersonManagementApp.CrossCutting.CoCo.Core.Contract.EventBrokerage;
 using Fateblade.Components.Data.GenericDataStoring.Contract;
 using System;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("Components.Data.GenericDataStoring.SqLite.Tests")]
 
 namespace Fateblade.Components.Data.GenericDataStoring.SqLite
 {

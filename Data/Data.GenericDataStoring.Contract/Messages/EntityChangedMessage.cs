@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Fateblade.Components.Data.GenericDataStoring.Contract.Messages
 {
@@ -16,6 +17,17 @@ namespace Fateblade.Components.Data.GenericDataStoring.Contract.Messages
         public new TEntity Entity
         {
             get => (TEntity) base.Entity;
+            set => base.Entity = value;
+        }
+    }
+
+    public class EntitiesChangedMessage<TEntity> : EntityChangedMessage
+    {
+        public new Type Type { get; } = typeof(TEntity);
+
+        public new IEnumerable<TEntity> Entity
+        {
+            get => (IEnumerable<TEntity>)base.Entity;
             set => base.Entity = value;
         }
     }
