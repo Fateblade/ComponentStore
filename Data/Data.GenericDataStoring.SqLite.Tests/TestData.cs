@@ -44,9 +44,26 @@ public class GuidForeignTestDataClass : IIdentifiableGuidEntity
     public GuidTestDataClass ForeignValue { get; set; }
 }
 
+public class GuidForeignTestDataClassPropertyUpdater : IPropertyUpdater<GuidForeignTestDataClass>
+{
+    public void UpdateProperties(GuidForeignTestDataClass source, GuidForeignTestDataClass target)
+    {
+        target.ForeignValue = source.ForeignValue;
+    }
+}
+
 [Table(nameof(GuidCrossTestDataClass))]
 public class GuidCrossTestDataClass : IIdentifiableGuidEntity
 {
     public Guid Id { get; set; }
     public List<GuidTestDataClass> CrossValue { get; set; }
+}
+
+public class GuidCrossTestDataClassPropertyUpdater : IPropertyUpdater<GuidCrossTestDataClass>
+{
+    public void UpdateProperties(GuidCrossTestDataClass source, GuidCrossTestDataClass target)
+    {
+        target.CrossValue = new List<GuidTestDataClass>();
+        target.CrossValue.AddRange(source.CrossValue);
+    }
 }

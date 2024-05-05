@@ -7,8 +7,8 @@ namespace Fateblade.Components.Data.GenericDataStoring.SqLite.Tests;
 
 public abstract class GenericRepositoryTestBase<TIdentifiable> where TIdentifiable : class, IIdentifiableGuidEntity
 {
-    private IEventBroker _eventBrokerMock;
-    private GenericDataSqLiteStoringConfiguration _testConfiguration;
+    protected IEventBroker EventBrokerMock;
+    protected GenericDataSqLiteStoringConfiguration TestConfiguration;
 
     protected IPropertyUpdater<TIdentifiable> PropertyUpdater;
 
@@ -20,8 +20,8 @@ public abstract class GenericRepositoryTestBase<TIdentifiable> where TIdentifiab
     [OneTimeSetUp]
     public void OneTimeSetup()
     {
-        _eventBrokerMock = A.Fake<IEventBroker>();
-        _testConfiguration = new GenericDataSqLiteStoringConfiguration
+        EventBrokerMock = A.Fake<IEventBroker>();
+        TestConfiguration = new GenericDataSqLiteStoringConfiguration
         {
             DbDirectoryPath = Directory.GetCurrentDirectory(),
             DbName = "testDb.db"
@@ -32,7 +32,7 @@ public abstract class GenericRepositoryTestBase<TIdentifiable> where TIdentifiab
     [SetUp]
     public void SetUp()
     {
-        Sut = new GenericRepository<TIdentifiable>(_eventBrokerMock, PropertyUpdater, _testConfiguration);
+        Sut = new GenericRepository<TIdentifiable>(EventBrokerMock, PropertyUpdater, TestConfiguration);
     }
 
     [TearDown]
