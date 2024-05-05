@@ -10,6 +10,10 @@ using System.Runtime.CompilerServices;
 
 namespace Fateblade.Components.Data.GenericDataStoring.MariaDb
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>This implementation can only be used for a singular type, and will not be able to support migrating over version changes as it uses efcore with ensure created</remarks>
     public class GenericDataMariaDbStoringActivator : IComponentActivator
     {
         public void Activated()
