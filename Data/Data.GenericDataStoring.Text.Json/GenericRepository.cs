@@ -15,7 +15,8 @@ namespace Fateblade.Components.Data.GenericDataStoring.Text.Json
         //members
         private readonly IEventBroker _eventBroker;
         private readonly string _fileName = typeof(TEntity).Name + ".json";
-        
+        private readonly JsonSerializerOptions _serializerOptions;
+
         private List<TEntity> _entities;
         private readonly string _rootPath;
         private readonly string _completePath;
@@ -26,7 +27,6 @@ namespace Fateblade.Components.Data.GenericDataStoring.Text.Json
         //properties
         public IQueryable<TEntity> Query => _entities.AsQueryable();
 
-        protected JsonSerializerOptions SerializerOptions { get; set; }
 
 
         //ctors
@@ -40,7 +40,10 @@ namespace Fateblade.Components.Data.GenericDataStoring.Text.Json
 
             _completePath = Path.Combine(_rootPath, _fileName);
 
-            SerializerOptions = new JsonSerializerOptions();
+            _serializerOptions = new JsonSerializerOptions();
+
+            // ReSharper disable once VirtualMemberCallInConstructor
+            ConfigureSerializerOptions(_serializerOptions);
 
             initializeEntitiesFromFile();
             _eventBroker.Subscribe<EntityChangedMessage<TEntity>>(handleEntityChangedMessage);
@@ -109,6 +112,15 @@ namespace Fateblade.Components.Data.GenericDataStoring.Text.Json
 
 
 
+        //protected methods
+        /// <summary>
+        /// Used to configure the json serialization options.
+        /// Be aware, this method is called during construction of the object!
+        /// </summary>
+        /// <param name="configurableOptions"></param>
+        protected virtual void ConfigureSerializerOptions(JsonSerializerOptions configurableOptions){ }
+
+
         //private methods
         private void initializeEntitiesFromFile()
         {
@@ -125,7 +137,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.Text.Json
             {
                 using (var sr = new StreamReader(File.Open(_completePath, FileMode.OpenOrCreate)))
                 {
-                    _entities = JsonSerializer.Deserialize<List<TEntity>>(sr.ReadToEnd(), SerializerOptions);
+                    _entities = JsonSerializer.Deserialize<List<TEntity>>(sr.ReadToEnd(), _serializerOptions);
                 }
             }
         }
@@ -140,7 +152,7 @@ namespace Fateblade.Components.Data.GenericDataStoring.Text.Json
         {
             using (var sw = new StreamWriter(File.Open(_completePath, FileMode.Create)))
             {
-                sw.Write(JsonSerializer.Serialize(_entities, SerializerOptions));
+                sw.Write(JsonSerializer.Serialize(_entities, _serializerOptions));
             }
         }
 
