@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Fateblade.Components.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <AssemblyName>Components.$(MSBuildProjectName)</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\CrossCutting.Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj" />
+    <ProjectReference Include="..\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CoCo.Core.Contract">
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <CallTarget Targets="CopyProjectToDll" />
+  </Target>
+
+</Project>
