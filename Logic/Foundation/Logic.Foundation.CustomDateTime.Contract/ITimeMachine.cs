@@ -12,20 +12,20 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime.Contract
         DateTimeStamp CurrentTime { get; }
 
         /// <summary>
-        /// Moves the CurrentTime of the time machine forward by the specified amount
+        /// Checks if the CurrentTime of the time machine can be moved forward by the specified amount
         /// </summary>
         /// <param name="unit"></param>
         /// <param name="amount"></param>
-        /// <returns>the new current time value</returns>
-        DateTimeStamp MoveForward(DateTimeUnit unit, int amount);
+        /// <returns></returns>
+        bool CanMove(DateTimeUnit unit, int amount);
 
         /// <summary>
-        /// Moves the CurrentTime of the time machine backward by the specified amount
+        /// Moves the CurrentTime of the time machine forward or backward by the specified amount.
         /// </summary>
         /// <param name="unit"></param>
-        /// <param name="amount"></param>
+        /// <param name="amount">Negative amount moves backward</param>
         /// <returns>the new current time value</returns>
-        DateTimeStamp MoveBackward(DateTimeUnit unit, int amount);
+        DateTimeStamp Move(DateTimeUnit unit, int amount);
 
         /// <summary>
         /// Sets the current time to the specified time

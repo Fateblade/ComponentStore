@@ -2,7 +2,6 @@
 using Fateblade.Components.Logic.Foundation.CustomDateTime.Contract.DataClasses;
 using Fateblade.Components.Logic.Foundation.CustomDateTime.Contract.Exceptions;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,12 +9,25 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime
 {
     class TimeMachine : ITimeMachine
     {
+        private readonly object _lock = new object();
         private readonly Dictionary<Guid, ulong> _relativeToRootValues;
+        private DateTimeStamp _currentTime;
 
 
         public IReadOnlyCollection<DateTimeUnit> TimeFormat { get; }
         public DateTimeUnit RootUnit { get; }
-        public DateTimeStamp CurrentTime { get; private set; }
+
+        public DateTimeStamp CurrentTime
+        {
+            get
+            {
+                lock (_lock)
+                {
+                    return _currentTime;
+                }
+            }
+            private set => _currentTime = value;
+        }
 
 
         public TimeMachine(params DateTimeUnit[] timeFormat)
@@ -27,34 +39,62 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime
 
             CurrentTime = startingTime;
             TimeFormat = timeFormat;
-            RootUnit = timeFormat.First(unit => !unit.LeavingRelations.Any());
+            RootUnit = timeFormat.First(unit => !unit.IncomingRelations.Any() && unit.LeavingRelations.Any());
             _relativeToRootValues = buildTimeFormatValueDictionary(timeFormat);
         }
 
 
-        public DateTimeStamp MoveForward(DateTimeUnit unit, int amount)
+        public bool CanMove(DateTimeUnit unit, int amount)
         {
-            if (!_relativeToRootValues.TryGetValue(unit.Id, out var rootUnitsPerUnit)) throw new UnitNotInFormatException(unit);
-            var amountInRootUnit = (ulong)amount * rootUnitsPerUnit;
+            lock (_lock)
+            {
+                if (!_relativeToRootValues.TryGetValue(unit.Id, out var rootUnitsPerUnit)) return false;
+                if (amount == 0) return true;
+                
+                var amountInRootUnit = (ulong)Math.Abs(amount) * rootUnitsPerUnit;
 
-            moveForward(amountInRootUnit);
-
-            return CurrentTime;
+                return amount < 0 
+                    ? canMoveBackward(amountInRootUnit) 
+                    : canMoveForward(amountInRootUnit);
+            }
         }
 
-        public DateTimeStamp MoveBackward(DateTimeUnit unit, int amount)
+        public DateTimeStamp Move(DateTimeUnit unit, int amount)
         {
-            if (!_relativeToRootValues.TryGetValue(unit.Id, out var rootUnitsPerUnit)) throw new UnitNotInFormatException(unit);
-            var amountInRootUnit = (ulong)amount * rootUnitsPerUnit;
+            lock (_lock)
+            {
+                if (!_relativeToRootValues.TryGetValue(unit.Id, out var rootUnitsPerUnit))
+                    throw new UnitNotInFormatException(unit);
+                if (amount == 0) return CurrentTime;
+                
 
-            moveBackward(amountInRootUnit);
+                var maxAmountPerMove = ulong.MaxValue / rootUnitsPerUnit;
 
-            return CurrentTime;
+                if (maxAmountPerMove <= (ulong)amount)
+                {
+
+                }
+
+
+                if (amount < 0)
+                {
+                    moveBackward(amountInRootUnit);
+                }
+                else
+                {
+                    moveForward(amountInRootUnit);
+                }
+
+                return CurrentTime;
+            }
         }
 
         public void SetTime(DateTimeStamp timeStamp)
         {
-            CurrentTime = timeStamp;
+            lock(_lock)
+            {
+                CurrentTime = timeStamp;
+            }
         }
 
 
@@ -99,13 +139,46 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime
 
         private void moveForward(ulong amount)
         {
-            CurrentTime = new DateTimeStamp(CurrentTime.TimePart1 + amount, CurrentTime.TimePart2);
+            var overflow = CurrentTime.TimePart1 + amount;
+
+            if (CurrentTime.TimePart2 == ulong.MaxValue && overflow < CurrentTime.TimePart1)
+                throw new DateTimeOverflowException();
+
+            CurrentTime = new DateTimeStamp(
+                overflow,
+                overflow < CurrentTime.TimePart1
+                    ? CurrentTime.TimePart2 + 1
+                    : CurrentTime.TimePart2);
         }
 
 
         private void moveBackward(ulong amount)
         {
-            CurrentTime = new DateTimeStamp(CurrentTime.TimePart1 - amount, CurrentTime.TimePart2);
+            var underflow = CurrentTime.TimePart1 - amount;
+
+            if (CurrentTime.TimePart2 == 0 && underflow > CurrentTime.TimePart1)
+                throw new DateTimeUnderflowException();
+
+            CurrentTime = new DateTimeStamp(
+                underflow,
+                underflow > CurrentTime.TimePart1 
+                    ? CurrentTime.TimePart2 - 1 
+                    : CurrentTime.TimePart2);
         }
+
+        private bool canMoveForward(ulong amount)
+        {
+            var overflow = CurrentTime.TimePart1 + amount;
+            
+            return CurrentTime.TimePart2 != ulong.MaxValue || overflow >= CurrentTime.TimePart1;
+        }
+
+        private bool canMoveBackward(ulong amount)
+        {
+            var underflow = CurrentTime.TimePart1 - amount;
+
+            return CurrentTime.TimePart2 != 0 || underflow <= CurrentTime.TimePart1;
+        }
+
     }
 }

@@ -10,5 +10,7 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime.Contract.DataClas
         public DateTimeUnit Source { get; set; }
         public DateTimeUnit Target { get; set; }
         public uint Value { get; set; }
+
+        public override string ToString() => Name;
     }
 }

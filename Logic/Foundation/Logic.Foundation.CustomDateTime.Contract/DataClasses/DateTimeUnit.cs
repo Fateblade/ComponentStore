@@ -9,8 +9,9 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime.Contract.DataClas
         public Guid Id { get; set; }
         public string FullName { get; set; }
         public char FormatKey { get; set; } 
-        public List<DateTimeUnitRelation> AllRelations { get; set; } = new List<DateTimeUnitRelation>();
         public List<DateTimeUnitRelation> LeavingRelations { get; set; } = new List<DateTimeUnitRelation>();
         public List<DateTimeUnitRelation> IncomingRelations { get; set; } = new List<DateTimeUnitRelation>();
+
+        public override string ToString() => FullName;
     }
 }
