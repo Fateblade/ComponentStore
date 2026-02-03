@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<Import Project="..\..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>Fateblade.Components.Logic.Foundation.FeatureTrackingComponent.Contract</RootNamespace>
     <AssemblyName>Components.Logic.Foundation.FeatureTrackingComponent.Contract</AssemblyName>
   </PropertyGroup>
