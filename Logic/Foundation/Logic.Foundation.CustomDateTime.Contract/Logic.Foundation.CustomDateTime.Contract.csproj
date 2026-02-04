@@ -1,23 +1,29 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Components.$(MSBuildProjectName)</AssemblyName>
-    <RootNamespace>Fateblade.Components.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <TargetFrameworks>netstandard2.0;net10.0</TargetFrameworks>
+    <AssemblyName>Components.Logic.Foundation.CustomDateTime.Contract</AssemblyName>
+    <RootNamespace>Fateblade.Components.Logic.Foundation.CustomDateTime.Contract</RootNamespace>
+
+    <!-- NuGet Package Metadata -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Fateblade.Components.Logic.Foundation.CustomDateTime.Contract</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Fateblade</Authors>
+    <Company>Fateblade</Company>
+    <Product>Fateblade Components</Product>
+    <Description>Custom date/time (time machine) contract interfaces for testing</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\CrossCutting\CrossCutting.Identifiable.DataClasses\CrossCutting.Identifiable.DataClasses.csproj" />
   </ItemGroup>
-    
+
   <ItemGroup>
-    <Reference Include="CoCo.Core.Contract" />
+    <PackageReference Include="Fateblade.CoCo.Core.Contract" Version="1.0.0" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <CallTarget Targets="CopyProjectToDll" />
-  </Target>
-
-  
 </Project>

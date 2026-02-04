@@ -1,17 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net10.0</TargetFrameworks>
     <AssemblyName>Components.CrossCutting.Logging.Contract</AssemblyName>
     <RootNamespace>Fateblade.Components.CrossCutting.Logging.Contract</RootNamespace>
+
+    <!-- NuGet Package Metadata -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Fateblade.Components.CrossCutting.Logging.Contract</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Fateblade</Authors>
+    <Company>Fateblade</Company>
+    <Product>Fateblade Components</Product>
+    <Description>Logging abstraction contract interfaces</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Messages\" />
-  </ItemGroup>
-
-
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<CallTarget Targets="CopyProjectToDll" />
-	</Target>
 </Project>

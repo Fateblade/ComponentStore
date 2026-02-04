@@ -1,12 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\..\_Build\FatebladeProjectDefaultsImport.msb.xml" />
+
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net10.0</TargetFrameworks>
     <AssemblyName>Components.Data.GenericDataStoring.SqLite</AssemblyName>
     <RootNamespace>Fateblade.Components.Data.GenericDataStoring.SqLite</RootNamespace>
+
+    <!-- NuGet Package Metadata -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Fateblade.Components.Data.GenericDataStoring.SqLite</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Fateblade</Authors>
+    <Company>Fateblade</Company>
+    <Product>Fateblade Components</Product>
+    <Description>SQLite generic data repository implementation using Entity Framework Core</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Fateblade.CoCo.Core.Contract" Version="1.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.32" />
     <PackageReference Include="SQLite" Version="3.13.0" />
@@ -15,14 +28,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Data.GenericDataStoring.Contract\Data.GenericDataStoring.Contract.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="CoCo.Core.Contract">
-    </Reference>
-  </ItemGroup>
-
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<CallTarget Targets="CopyProjectToDll" />
-	</Target>
 
 </Project>

@@ -70,11 +70,12 @@ namespace Fateblade.Components.Logic.Foundation.CustomDateTime
 
                 var maxAmountPerMove = ulong.MaxValue / rootUnitsPerUnit;
 
-                if (maxAmountPerMove <= (ulong)amount)
+                if (maxAmountPerMove <= (ulong)Math.Abs(amount))
                 {
-
+                    throw new ArgumentOutOfRangeException(nameof(amount), "Amount exceeds maximum move range");
                 }
 
+                var amountInRootUnit = (ulong)Math.Abs(amount) * rootUnitsPerUnit;
 
                 if (amount < 0)
                 {
